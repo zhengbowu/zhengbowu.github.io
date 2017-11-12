@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>武林的博客</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="title:java 基础系列之基本类型date:2017-11-12 21:34:42 categories:”java基础”java有8个基础数据类型 4个整型，2个浮点型，1个布尔型和1个字符型 基本类型取值范围     类型    字节长度    范围  byte 1个字节 -128~127  short 2个字节 -32768~32767  int 4个字节 -2147 483 648">
+<meta property="og:type" content="article">
+<meta property="og:title" content="武林的博客">
+<meta property="og:url" content="http://blog.zhengwl.com/2017/11/12/java-variable/index.html">
+<meta property="og:site_name" content="武林的博客">
+<meta property="og:description" content="title:java 基础系列之基本类型date:2017-11-12 21:34:42 categories:”java基础”java有8个基础数据类型 4个整型，2个浮点型，1个布尔型和1个字符型 基本类型取值范围     类型    字节长度    范围  byte 1个字节 -128~127  short 2个字节 -32768~32767  int 4个字节 -2147 483 648">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:image" content="http://blog.zhengwl.com/2017/11/css/images/javaoperator.jpg">
+<meta property="og:updated_time" content="2017-11-12T13:46:44.086Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="武林的博客">
+<meta name="twitter:description" content="title:java 基础系列之基本类型date:2017-11-12 21:34:42 categories:”java基础”java有8个基础数据类型 4个整型，2个浮点型，1个布尔型和1个字符型 基本类型取值范围     类型    字节长度    范围  byte 1个字节 -128~127  short 2个字节 -32768~32767  int 4个字节 -2147 483 648">
+<meta name="twitter:image" content="http://blog.zhengwl.com/2017/11/css/images/javaoperator.jpg">
+  
+    <link rel="alternate" href="/atom.xml" title="武林的博客" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+  
+
+</head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">武林的博客</a>
+      </h1>
+      
+        <h2 id="subtitle-wrap">
+          <a href="/" id="subtitle">记录学到的知识和总结</a>
+        </h2>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="搜索"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://blog.zhengwl.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-java-variable" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2017/11/12/java-variable/" class="article-date">
+  <time datetime="2017-11-12T13:04:44.351Z" itemprop="datePublished">2017-11-12</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <hr>
+<p>title:java 基础系列之基本类型<br>date:2017-11-12 21:34:42</p>
+<h2 id="categories-”java基础”"><a href="#categories-”java基础”" class="headerlink" title="categories:”java基础”"></a>categories:”java基础”</h2><p>java有8个基础数据类型 4个整型，2个浮点型，1个布尔型和1个字符型</p>
+<h2 id="基本类型取值范围"><a href="#基本类型取值范围" class="headerlink" title="基本类型取值范围"></a>基本类型取值范围</h2><p><table></table></p>
+<p><tr><br>    <td>类型</td><br>    <td>字节长度</td><br>    <td>范围</td><br></tr></p>
+<p><tr></tr></p>
+<p><td>byte</td></p>
+<p><td>1个字节</td></p>
+<p><td>-128~127</td><br></p>
+<p><tr></tr></p>
+<p><td>short</td></p>
+<p><td>2个字节</td></p>
+<p><td>-32768~32767</td><br></p>
+<p><tr></tr></p>
+<p><td>int</td></p>
+<p><td>4个字节</td></p>
+<p><td>-2147 483 648~2147483647</td><br></p>
+<p><tr></tr></p>
+<p><td>long</td></p>
+<p><td>8个字节</td></p>
+<p><td>-9223372036854775808~9223372036854775807</td><br></p>
+<p><tr></tr></p>
+<p><td>float</td></p>
+<p><td>4个字节</td></p>
+<p><td>大约土3.40282347E+38F(6~7位有效小数位)</td><br></p>
+<p><tr></tr></p>
+<p><td>long</td></p>
+<p><td>8个字节</td></p>
+<p><td>大约土1.79769313486231570E+308(15位有效小数位)</td><br><br></p>
+<h3 id="char类型"><a href="#char类型" class="headerlink" title="char类型"></a>char类型</h3><p>char类型使用UTF-16字符编码</p>
+<h3 id="bool类型"><a href="#bool类型" class="headerlink" title="bool类型"></a>bool类型</h3><p>bool类型有两种true和false，在java中布尔类型不是数字类型，和整数0和1没有关系</p>
+<h3 id="算术操作符"><a href="#算术操作符" class="headerlink" title="算术操作符"></a>算术操作符</h3><p><img src="../../css/images/javaoperator.jpg"></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://blog.zhengwl.com/2017/11/12/java-variable/" data-id="cj9wtdhei0000kwtprbxkiwuo" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+  
+    <a href="/2017/11/12/java-reflect/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title"></div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">归档</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/11/">十一月 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/09/">九月 2017</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">最新文章</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2017/11/12/java-variable/">(no title)</a>
+          </li>
+        
+          <li>
+            <a href="/2017/11/12/java-reflect/">(no title)</a>
+          </li>
+        
+          <li>
+            <a href="/2017/09/24/hello-world/">(no title)</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2017 zhengwl<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+  </div>
+</body>
+</html>
