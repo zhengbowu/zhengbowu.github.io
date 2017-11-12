@@ -5,17 +5,17 @@
   
   <title>武林的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="title:java 基础系列之反射date:2017-11-12 21:34:42categories:”java基础”  tags:[“java”,”反射”]在java.lang.reflect包中有3个类 Field类，Method类和Constructor类 Class对象每个类都有一个Class对象、、、Object obj=new Person();Class cl=obj.getC">
+  <meta name="description" content="title:java 基础系列之反射date:2017-11-12 21:34:42categories:”java基础”  tags:[“java”,”反射”]在java.lang.reflect包中有3个类 Field类，Method类和Constructor类 Class对象每个类都有一个Class对象1234Object obj=new Person();Class cl=obj.get">
 <meta property="og:type" content="article">
 <meta property="og:title" content="武林的博客">
 <meta property="og:url" content="http://blog.zhengwl.com/2017/11/12/java-reflect/index.html">
 <meta property="og:site_name" content="武林的博客">
-<meta property="og:description" content="title:java 基础系列之反射date:2017-11-12 21:34:42categories:”java基础”  tags:[“java”,”反射”]在java.lang.reflect包中有3个类 Field类，Method类和Constructor类 Class对象每个类都有一个Class对象、、、Object obj=new Person();Class cl=obj.getC">
+<meta property="og:description" content="title:java 基础系列之反射date:2017-11-12 21:34:42categories:”java基础”  tags:[“java”,”反射”]在java.lang.reflect包中有3个类 Field类，Method类和Constructor类 Class对象每个类都有一个Class对象1234Object obj=new Person();Class cl=obj.get">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2017-11-12T13:59:20.024Z">
+<meta property="og:updated_time" content="2017-11-12T14:18:55.420Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="武林的博客">
-<meta name="twitter:description" content="title:java 基础系列之反射date:2017-11-12 21:34:42categories:”java基础”  tags:[“java”,”反射”]在java.lang.reflect包中有3个类 Field类，Method类和Constructor类 Class对象每个类都有一个Class对象、、、Object obj=new Person();Class cl=obj.getC">
+<meta name="twitter:description" content="title:java 基础系列之反射date:2017-11-12 21:34:42categories:”java基础”  tags:[“java”,”反射”]在java.lang.reflect包中有3个类 Field类，Method类和Constructor类 Class对象每个类都有一个Class对象1234Object obj=new Person();Class cl=obj.get">
   
     <link rel="alternate" href="/atom.xml" title="武林的博客" type="application/atom+xml">
   
@@ -83,8 +83,8 @@
         <hr>
 <p>title:java 基础系列之反射<br>date:2017-11-12 21:34:42<br>categories:”java基础” </p>
 <h2 id="tags-“java”-”反射”"><a href="#tags-“java”-”反射”" class="headerlink" title="tags:[“java”,”反射”]"></a>tags:[“java”,”反射”]</h2><p>在java.lang.reflect包中有3个类 Field类，Method类和Constructor类</p>
-<h2 id="Class对象"><a href="#Class对象" class="headerlink" title="Class对象"></a>Class对象</h2><p>每个类都有一个Class对象<br>、、、<br>Object obj=new Person();<br>Class cl=obj.getClass();<br>or<br>Class cl2=Class.forName(className);<br>、、、</p>
-<h3 id="对象的构造"><a href="#对象的构造" class="headerlink" title="对象的构造"></a>对象的构造</h3><p>、、、<br>无参构造<br>Class cl3=Class.forName(“Person”);<br>Object obj=cl3.newInstance();<br>/<em>已知构造函数参数情况下</em>/<br>Constructor constr=cl3.getConstructor(int.Class);<br>Object obj=constr.newInstance(33);<br>、、、</p>
+<h2 id="Class对象"><a href="#Class对象" class="headerlink" title="Class对象"></a>Class对象</h2><p>每个类都有一个Class对象<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">Object obj=new Person();</div><div class="line">Class cl=obj.getClass();</div><div class="line">or</div><div class="line">Class cl2=Class.forName(className);</div></pre></td></tr></table></figure></p>
+<h3 id="对象的构造"><a href="#对象的构造" class="headerlink" title="对象的构造"></a>对象的构造</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">无参构造</div><div class="line">Class cl3=Class.forName(<span class="string">"Person"</span>);</div><div class="line">Object obj=cl3.newInstance();</div><div class="line">/*已知构造函数参数情况下*/</div><div class="line">Constructor constr=cl3.getConstructor(int.Class);</div><div class="line">Object obj=constr.newInstance(33);</div></pre></td></tr></table></figure>
 <h3 id="变量的获取和设置"><a href="#变量的获取和设置" class="headerlink" title="变量的获取和设置"></a>变量的获取和设置</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">Object obj=new Person();</div><div class="line"><span class="keyword">for</span>(Field f:obj.getClass().getDeclaredFields())&#123;</div><div class="line">	f.setAccessible(<span class="literal">true</span>)//在使用私有的Field和Method对象之前，使用setAccessible方法解锁</div><div class="line">	Object val=f.get(obj);</div><div class="line">	System.out.println(f.getName()+<span class="string">":"</span>+val);</div><div class="line"></div><div class="line">	f.set(obj,val+<span class="string">"new"</span>);</div><div class="line">&#125;</div></pre></td></tr></table></figure>
 <h3 id="方法调用"><a href="#方法调用" class="headerlink" title="方法调用"></a>方法调用</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">Class cl4=Class.forName(<span class="string">"Person"</span>);</div><div class="line">Method m=cl4.getDeclareMethod(<span class="string">"getName"</span>);</div><div class="line">Object rel=m.invoke(obj,arg1,arg2,...)</div></pre></td></tr></table></figure>
 <h3 id="获取JavaBean属性"><a href="#获取JavaBean属性" class="headerlink" title="获取JavaBean属性"></a>获取JavaBean属性</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">Class cl5=...;</div><div class="line">BeanInfo info=Introspector.getBeanInfo(cl5);</div><div class="line">PropertyDescriptor[] props=info.getPropertyDescriptors();</div></pre></td></tr></table></figure>
@@ -94,7 +94,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://blog.zhengwl.com/2017/11/12/java-reflect/" data-id="cj9wttn4x0000kstpxq7c3hyh" class="article-share-link">Share</a>
+      <a data-url="http://blog.zhengwl.com/2017/11/12/java-reflect/" data-id="cj9wu87qn0003twtprmaxlp6e" class="article-share-link">Share</a>
       
       
     </footer>
