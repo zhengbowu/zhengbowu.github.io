@@ -69,18 +69,30 @@
     <article id="post-java-variable" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/2017/11/12/java-variable/" class="article-date">
-  <time datetime="2017-11-12T13:04:44.351Z" itemprop="datePublished">2017-11-12</time>
+  <time datetime="2017-11-12T13:34:42.000Z" itemprop="datePublished">2017-11-12</time>
 </a>
     
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/java基础/">java基础</a>
+  </div>
+
   </div>
   <div class="article-inner">
     
     
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/11/12/java-variable/">java 基础系列之基本类型</a>
+    </h1>
+  
+
+      </header>
+    
     <div class="article-entry" itemprop="articleBody">
       
-        <hr>
-<p>title:java 基础系列之基本类型<br>date:2017-11-12 21:34:42</p>
-<h2 id="categories-”java基础”"><a href="#categories-”java基础”" class="headerlink" title="categories:”java基础”"></a>categories:”java基础”</h2><p>java有8个基础数据类型 4个整型，2个浮点型，1个布尔型和1个字符型</p>
+        <p>java有8个基础数据类型 4个整型，2个浮点型，1个布尔型和1个字符型</p>
 <h2 id="基本类型取值范围"><a href="#基本类型取值范围" class="headerlink" title="基本类型取值范围"></a>基本类型取值范围</h2><table>
 <thead>
 <tr>
@@ -129,7 +141,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://blog.zhengwl.com/2017/11/12/java-variable/" data-id="cj9wu87qa0001twtpr0abkq5u" class="article-share-link">Share</a>
+      <a data-url="http://blog.zhengwl.com/2017/11/12/java-variable/" data-id="cj9wuoj6y0001xctpmleu9cuq" class="article-share-link">Share</a>
       
       
     </footer>
@@ -142,18 +154,30 @@
     <article id="post-java-reflect" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/2017/11/12/java-reflect/" class="article-date">
-  <time datetime="2017-11-12T12:21:55.857Z" itemprop="datePublished">2017-11-12</time>
+  <time datetime="2017-11-12T13:34:42.000Z" itemprop="datePublished">2017-11-12</time>
 </a>
     
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/java基础/">java基础</a>
+  </div>
+
   </div>
   <div class="article-inner">
     
     
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/11/12/java-reflect/">java 基础系列之反射</a>
+    </h1>
+  
+
+      </header>
+    
     <div class="article-entry" itemprop="articleBody">
       
-        <hr>
-<p>title:java 基础系列之反射<br>date:2017-11-12 21:34:42<br>categories:”java基础” </p>
-<h2 id="tags-“java”-”反射”"><a href="#tags-“java”-”反射”" class="headerlink" title="tags:[“java”,”反射”]"></a>tags:[“java”,”反射”]</h2><p>在java.lang.reflect包中有3个类 Field类，Method类和Constructor类</p>
+        <p>在java.lang.reflect包中有3个类 Field类，Method类和Constructor类</p>
 <h2 id="Class对象"><a href="#Class对象" class="headerlink" title="Class对象"></a>Class对象</h2><p>每个类都有一个Class对象<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">Object obj=new Person();</div><div class="line">Class cl=obj.getClass();</div><div class="line">or</div><div class="line">Class cl2=Class.forName(className);</div></pre></td></tr></table></figure></p>
 <h3 id="对象的构造"><a href="#对象的构造" class="headerlink" title="对象的构造"></a>对象的构造</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">无参构造</div><div class="line">Class cl3=Class.forName(<span class="string">"Person"</span>);</div><div class="line">Object obj=cl3.newInstance();</div><div class="line">/*已知构造函数参数情况下*/</div><div class="line">Constructor constr=cl3.getConstructor(int.Class);</div><div class="line">Object obj=constr.newInstance(33);</div></pre></td></tr></table></figure>
 <h3 id="变量的获取和设置"><a href="#变量的获取和设置" class="headerlink" title="变量的获取和设置"></a>变量的获取和设置</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">Object obj=new Person();</div><div class="line"><span class="keyword">for</span>(Field f:obj.getClass().getDeclaredFields())&#123;</div><div class="line">	f.setAccessible(<span class="literal">true</span>)//在使用私有的Field和Method对象之前，使用setAccessible方法解锁</div><div class="line">	Object val=f.get(obj);</div><div class="line">	System.out.println(f.getName()+<span class="string">":"</span>+val);</div><div class="line"></div><div class="line">	f.set(obj,val+<span class="string">"new"</span>);</div><div class="line">&#125;</div></pre></td></tr></table></figure>
@@ -165,9 +189,11 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://blog.zhengwl.com/2017/11/12/java-reflect/" data-id="cj9wu87qn0003twtprmaxlp6e" class="article-share-link">Share</a>
+      <a data-url="http://blog.zhengwl.com/2017/11/12/java-reflect/" data-id="cj9wuoj7e0003xctpp44g9gah" class="article-share-link">Share</a>
       
       
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/java/">java</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/反射/">反射</a></li></ul>
+
     </footer>
   </div>
   
@@ -185,10 +211,19 @@
   <div class="article-inner">
     
     
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/09/24/hello-world/">hexo基础命令</a>
+    </h1>
+  
+
+      </header>
+    
     <div class="article-entry" itemprop="articleBody">
       
-        <hr>
-<h2 id="title-hexo基础命令"><a href="#title-hexo基础命令" class="headerlink" title="title:hexo基础命令"></a>title:hexo基础命令</h2><p>Welcome to <a href="https://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.</p>
+        <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.</p>
 <h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo new <span class="string">"My New Post"</span></div></pre></td></tr></table></figure>
 <p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="external">Writing</a></p>
 <h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo server</div></pre></td></tr></table></figure>
@@ -201,7 +236,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://blog.zhengwl.com/2017/09/24/hello-world/" data-id="cj9wu87qj0002twtplull65qa" class="article-share-link">Share</a>
+      <a data-url="http://blog.zhengwl.com/2017/09/24/hello-world/" data-id="cj9wuoj6y0002xctphxh5uu8c" class="article-share-link">Share</a>
       
       
     </footer>
@@ -217,12 +252,33 @@
           <aside id="sidebar">
   
     
+  <div class="widget-wrap">
+    <h3 class="widget-title">分类</h3>
+    <div class="widget">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/java基础/">java基础</a></li></ul>
+    </div>
+  </div>
+
 
   
     
+  <div class="widget-wrap">
+    <h3 class="widget-title">标签</h3>
+    <div class="widget">
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/java/">java</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/反射/">反射</a></li></ul>
+    </div>
+  </div>
+
 
   
     
+  <div class="widget-wrap">
+    <h3 class="widget-title">标签云</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/java/" style="font-size: 10px;">java</a> <a href="/tags/反射/" style="font-size: 10px;">反射</a>
+    </div>
+  </div>
+
   
     
   <div class="widget-wrap">
@@ -241,15 +297,15 @@
       <ul>
         
           <li>
-            <a href="/2017/11/12/java-variable/">(no title)</a>
+            <a href="/2017/11/12/java-variable/">java 基础系列之基本类型</a>
           </li>
         
           <li>
-            <a href="/2017/11/12/java-reflect/">(no title)</a>
+            <a href="/2017/11/12/java-reflect/">java 基础系列之反射</a>
           </li>
         
           <li>
-            <a href="/2017/09/24/hello-world/">(no title)</a>
+            <a href="/2017/09/24/hello-world/">hexo基础命令</a>
           </li>
         
       </ul>
