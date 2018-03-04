@@ -5,20 +5,20 @@
   
   <title>Spring 实战 | 武林的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="##Spring初步1.Spring应用上下文ClasspathXmlApplicationContext –读取类路径下的XML配置文件 FileSystemXmlApplicationContextXmlWEbApplicationContext –读取Web应用下的xml配置文件2.Spring中Bean的生命周期3.Spring模块4.Spring 2.5新特性 完全支持java6和jav">
+  <meta name="description" content="Spring初步1.Spring应用上下文ClasspathXmlApplicationContext –读取类路径下的XML配置文件 FileSystemXmlApplicationContextXmlWEbApplicationContext –读取Web应用下的xml配置文件2.Spring中Bean的生命周期3.Spring模块4.Spring 2.5新特性 完全支持java6和java">
 <meta name="keywords" content="java,spring">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Spring 实战">
 <meta property="og:url" content="http://blog.zhengwl.com/2018/03/04/spring-action/index.html">
 <meta property="og:site_name" content="武林的博客">
-<meta property="og:description" content="##Spring初步1.Spring应用上下文ClasspathXmlApplicationContext –读取类路径下的XML配置文件 FileSystemXmlApplicationContextXmlWEbApplicationContext –读取Web应用下的xml配置文件2.Spring中Bean的生命周期3.Spring模块4.Spring 2.5新特性 完全支持java6和jav">
+<meta property="og:description" content="Spring初步1.Spring应用上下文ClasspathXmlApplicationContext –读取类路径下的XML配置文件 FileSystemXmlApplicationContextXmlWEbApplicationContext –读取Web应用下的xml配置文件2.Spring中Bean的生命周期3.Spring模块4.Spring 2.5新特性 完全支持java6和java">
 <meta property="og:locale" content="zh-CN">
 <meta property="og:image" content="http://upload-images.jianshu.io/upload_images/44770-f312de031566217d.png">
 <meta property="og:image" content="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1514900467446&di=afc23696c3abeea9fe68e10acd291c87&imgtype=0&src=http%3A%2F%2Fwww.yiibai.com%2Fuploads%2Fallimg%2F131213%2F2223014C2-0.png">
-<meta property="og:updated_time" content="2018-03-04T08:50:21.664Z">
+<meta property="og:updated_time" content="2018-03-04T09:02:10.836Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Spring 实战">
-<meta name="twitter:description" content="##Spring初步1.Spring应用上下文ClasspathXmlApplicationContext –读取类路径下的XML配置文件 FileSystemXmlApplicationContextXmlWEbApplicationContext –读取Web应用下的xml配置文件2.Spring中Bean的生命周期3.Spring模块4.Spring 2.5新特性 完全支持java6和jav">
+<meta name="twitter:description" content="Spring初步1.Spring应用上下文ClasspathXmlApplicationContext –读取类路径下的XML配置文件 FileSystemXmlApplicationContextXmlWEbApplicationContext –读取Web应用下的xml配置文件2.Spring中Bean的生命周期3.Spring模块4.Spring 2.5新特性 完全支持java6和java">
 <meta name="twitter:image" content="http://upload-images.jianshu.io/upload_images/44770-f312de031566217d.png">
   
     <link rel="alternate" href="/atom.xml" title="武林的博客" type="application/atom+xml">
@@ -94,25 +94,19 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>##Spring初步<br>1.Spring应用上下文<br><em>ClasspathXmlApplicationContext –读取类路径下的XML配置文件
+        <h2 id="Spring初步"><a href="#Spring初步" class="headerlink" title="Spring初步"></a>Spring初步</h2><p>1.Spring应用上下文<br><em>ClasspathXmlApplicationContext –读取类路径下的XML配置文件
 </em>FileSystemXmlApplicationContext<br><em>XmlWEbApplicationContext –读取Web应用下的xml配置文件<br>2.Spring中Bean的生命周期<br><img src="http://upload-images.jianshu.io/upload_images/44770-f312de031566217d.png" alt="bean生命周期"><br>3.Spring模块<br><img src="https://timgsa.baidu.com/timg?image&amp;quality=80&amp;size=b9999_10000&amp;sec=1514900467446&amp;di=afc23696c3abeea9fe68e10acd291c87&amp;imgtype=0&amp;src=http%3A%2F%2Fwww.yiibai.com%2Fuploads%2Fallimg%2F131213%2F2223014C2-0.png" alt=""><br>4.Spring 2.5新特性
 </em>完全支持java6和java EE5<br><em>使用@AutoWired实现基于注解驱动的依赖注入和使用@Qualifier实现细粒度的自动装配控制
 </em>支持@Resource自动扫描使用@Component注解所标注的Spring组件<br><em>一个全新的基于注解驱动的Spring MVC编程模型，极大地简化了Spring Web开发
 </em>内嵌支持AspectJ的类加载织入<br>…<br>5.Spring 3.0新特性<br><em>Spring MVC全面支持Rest
 </em>新的表达式语言吧Spring的依赖注入带到了一个新高度<br><em>Spring MVC的新注解 包括@CookieValue和@RequestHeader
 </em>通过注解取得声明异步和调度方法<br>*不再支持Java1.4</p>
-<p>##装配Bean<br>1.Spring的Bean作用域<br>作用域 | 定义<br>—-|—-<br>singletion | 每一个Spring容器中，一个Bean定义只有一个对象实例<br>prototype | 允许Bean的定义可以被实例化任意次（每次调用都创建一个实例）<br>request | 在一次Http请求中，每个Bean定义对应一个实例，该作用域仅限Web的Spring上下文中（Spring MVC）<br>session|在一次Http Session中，每个Bean定义对应一个实例，该作用域仅限Web的Spring上下文中（Spring MVC）<br>global-session|在一个全局Http Session中，每个Bean定义对应一个实例，该作用域仅限Portlet上下文中才有效</p>
-<p>##Spring XML配置</p>
-<p>##Spring AOP</p>
-<p>##Spring 数据库</p>
-<p>##Spring 事务</p>
-<p>##Spring MVC</p>
-<p>##Spring WebFlow</p>
-
+<h2 id="装配Bean"><a href="#装配Bean" class="headerlink" title="装配Bean"></a>装配Bean</h2><p>1.Spring的Bean作用域<br>作用域 | 定义<br>—-|—-<br>singletion | 每一个Spring容器中，一个Bean定义只有一个对象实例<br>prototype | 允许Bean的定义可以被实例化任意次（每次调用都创建一个实例）<br>request | 在一次Http请求中，每个Bean定义对应一个实例，该作用域仅限Web的Spring上下文中（Spring MVC）<br>session|在一次Http Session中，每个Bean定义对应一个实例，该作用域仅限Web的Spring上下文中（Spring MVC）<br>global-session|在一个全局Http Session中，每个Bean定义对应一个实例，该作用域仅限Portlet上下文中才有效</p>
+<h2 id="Spring-XML配置"><a href="#Spring-XML配置" class="headerlink" title="Spring XML配置"></a>Spring XML配置</h2><h2 id="Spring-AOP"><a href="#Spring-AOP" class="headerlink" title="Spring AOP"></a>Spring AOP</h2><h2 id="Spring-数据库"><a href="#Spring-数据库" class="headerlink" title="Spring 数据库"></a>Spring 数据库</h2><h2 id="Spring-事务"><a href="#Spring-事务" class="headerlink" title="Spring 事务"></a>Spring 事务</h2><h2 id="Spring-MVC"><a href="#Spring-MVC" class="headerlink" title="Spring MVC"></a>Spring MVC</h2><h2 id="Spring-WebFlow"><a href="#Spring-WebFlow" class="headerlink" title="Spring WebFlow"></a>Spring WebFlow</h2>
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://blog.zhengwl.com/2018/03/04/spring-action/" data-id="cjeck25zp000ctstp1tvabhfk" class="article-share-link">Share</a>
+      <a data-url="http://blog.zhengwl.com/2018/03/04/spring-action/" data-id="cjeckfzvg000d0ktp902qktk4" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/java/">java</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/spring/">spring</a></li></ul>
@@ -122,6 +116,15 @@
   
     
 <nav id="article-nav">
+  
+    <a href="/2018/03/04/java-innerclasses/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          java-innerclasses内部类
+        
+      </div>
+    </a>
   
   
     <a href="/2018/03/04/java-collection/" id="article-nav-older" class="article-nav-link-wrap">
@@ -184,6 +187,10 @@
       <ul>
         
           <li>
+            <a href="/2018/03/04/java-innerclasses/">java-innerclasses内部类</a>
+          </li>
+        
+          <li>
             <a href="/2018/03/04/spring-action/">Spring 实战</a>
           </li>
         
@@ -197,10 +204,6 @@
         
           <li>
             <a href="/2018/02/04/guava/">guava</a>
-          </li>
-        
-          <li>
-            <a href="/2017/11/12/java-reflect/">java 基础系列之反射</a>
           </li>
         
       </ul>
