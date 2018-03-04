@@ -3,15 +3,22 @@
 <head>
   <meta charset="utf-8">
   
-  <title>归档: 2017/11 | 武林的博客</title>
+  <title>java7 | 武林的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="武林的博客">
-<meta property="og:url" content="http://blog.zhengwl.com/archives/2017/11/index.html">
+  <meta name="description" content="##java7 Coin1.swicth支持String类型,原来只支持byte,char,short,int,char enum2.更强的数值文本表示法    int x=Integer.pareeInt(“1100110”,2)//二进制转十进制 java 6    int x=0b1100110//java 73.数字中的下划线例如：long along=2_147_483_648L;4.c">
+<meta name="keywords" content="java">
+<meta property="og:type" content="article">
+<meta property="og:title" content="java7">
+<meta property="og:url" content="http://blog.zhengwl.com/2018/03/04/java7/index.html">
 <meta property="og:site_name" content="武林的博客">
+<meta property="og:description" content="##java7 Coin1.swicth支持String类型,原来只支持byte,char,short,int,char enum2.更强的数值文本表示法    int x=Integer.pareeInt(“1100110”,2)//二进制转十进制 java 6    int x=0b1100110//java 73.数字中的下划线例如：long along=2_147_483_648L;4.c">
 <meta property="og:locale" content="zh-CN">
+<meta property="og:image" content="http://img.blog.csdn.net/20160308184325593">
+<meta property="og:updated_time" content="2018-03-04T08:40:30.114Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="武林的博客">
+<meta name="twitter:title" content="java7">
+<meta name="twitter:description" content="##java7 Coin1.swicth支持String类型,原来只支持byte,char,short,int,char enum2.更强的数值文本表示法    int x=Integer.pareeInt(“1100110”,2)//二进制转十进制 java 6    int x=0b1100110//java 73.数字中的下划线例如：long along=2_147_483_648L;4.c">
+<meta name="twitter:image" content="http://img.blog.csdn.net/20160308184325593">
   
     <link rel="alternate" href="/atom.xml" title="武林的博客" type="application/atom+xml">
   
@@ -64,58 +71,72 @@
   </div>
 </header>
       <div class="outer">
-        <section id="main">
-  
-  
-    
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2017" class="archive-year">2017</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2017/11/12/java-reflect/" class="archive-article-date">
-  <time datetime="2017-11-12T13:34:42.000Z" itemprop="datePublished">11月 12</time>
+        <section id="main"><article id="post-java7" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2018/03/04/java7/" class="article-date">
+  <time datetime="2018-03-04T08:28:31.000Z" itemprop="datePublished">2018-03-04</time>
 </a>
-      
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/11/12/java-reflect/">java 基础系列之反射</a>
+    <h1 class="article-title" itemprop="name">
+      java7
     </h1>
   
 
-    </header>
-  </div>
-</article>
-  
+      </header>
     
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2017/11/12/java-variable/" class="archive-article-date">
-  <time datetime="2017-11-12T13:34:42.000Z" itemprop="datePublished">11月 12</time>
-</a>
+    <div class="article-entry" itemprop="articleBody">
       
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/11/12/java-variable/">java 基础系列之基本类型</a>
-    </h1>
-  
+        <p>##java7 Coin<br>1.swicth支持String类型,原来只支持byte,char,short,int,char enum<br>2.更强的数值文本表示法<br>    int x=Integer.pareeInt(“1100110”,2)//二进制转十进制 java 6<br>    int x=0b1100110//java 7<br>3.数字中的下划线<br>例如：long along=2_147_483_648L;<br>4.catch多个异常进行处理<br>5.try-with-resources(TWR)<br>    try(OutputStream out=new FileOutputStream(file);<br>        Input Stream is=url.openStream()){<br>            byte[] buf=new byte[4096];<br>            int len;<br>            while((len=is.read(buf))&gt;0){<br>                out.write(buf,0,len);<br>            }<br>        }<br>6钻石语法<br>    Map<integer,map<string,string>&gt; item6=new HashMap<integer,map<string,string>&gt;();//java 6<br>    Map<integer,map<string,string>&gt; item7=new HashMap&lt;&gt;();</integer,map<string,string></integer,map<string,string></integer,map<string,string></p>
+<p>##java7新I/O即NIO.2<br>1.Path对象<br>2.WatchService对象<br>3.异步I/O</p>
+<p>##java7 DI<br>1.@Inject注解可出现在3种类成员之前<br>构造器，方法，属性<br>    @Inject public MurmurMessage(Header header,Content content){<br>        this.header=header;<br>        this.content=content;<br>    }<br>2.Qualifier<br>3.Guice DI 框架和Spring</p>
+<p>##java 并发<br>1.synchronized<br>2.volatile<br>在java1.0就已经把valatile作为关键字了，它是一种简单的对象域同步处理方法，包括原始类型。一个volatile遵循如下规则：<br><em>线程所见的值在使用之前总会从主内存中再读出来
+</em>线程所写的值总会在指令完成前被刷回到主内存中<br>3.ConcurrentHashMap和Atomic</p>
+<p>##类文件和字节码<br><img src="http://img.blog.csdn.net/20160308184325593" alt="类加载过程示意图"><br>1.类加载器<br> <em>根类加载器
+ </em>扩展类加载器<br> <em>应用类加载器
+ </em>自定义加载器</p>
+<p>##性能调优</p>
+<p>##函数式编程 备选JVM语言<br>1.Groovy<br>2.Scala<br>3.Clojure</p>
 
-    </header>
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://blog.zhengwl.com/2018/03/04/java7/" data-id="cjecjru82000begtp4ovie1em" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/java/">java</a></li></ul>
+
+    </footer>
   </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2018/03/04/java-collection/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          java 基础系列之常用集合
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2018/02/04/guava/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">guava</div>
+    </a>
+  
+</nav>
+
+  
 </article>
-  
-  
-    </div></section>
-  
 
 </section>
         
