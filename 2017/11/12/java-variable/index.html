@@ -13,7 +13,7 @@
 <meta property="og:description" content="java有8个基础数据类型 4个整型，2个浮点型，1个布尔型和1个字符型 基本类型取值范围   类型 字节长度 范围     byte 1个字节 -128~127   short 2个字节 -32768~32767   int 4个字节 -2147 483 648~2147483647   long 8个字节 -9223372036854775808~9223372036854775807   f">
 <meta property="og:locale" content="zh-CN">
 <meta property="og:image" content="http://blog.zhengwl.com/css/images/javaoperator.jpg">
-<meta property="og:updated_time" content="2017-11-12T14:26:10.249Z">
+<meta property="og:updated_time" content="2018-03-04T08:33:37.502Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="java 基础系列之基本类型">
 <meta name="twitter:description" content="java有8个基础数据类型 4个整型，2个浮点型，1个布尔型和1个字符型 基本类型取值范围   类型 字节长度 范围     byte 1个字节 -128~127   short 2个字节 -32768~32767   int 4个字节 -2147 483 648~2147483647   long 8个字节 -9223372036854775808~9223372036854775807   f">
@@ -141,11 +141,13 @@
 <h3 id="char类型"><a href="#char类型" class="headerlink" title="char类型"></a>char类型</h3><p>char类型使用UTF-16字符编码</p>
 <h3 id="bool类型"><a href="#bool类型" class="headerlink" title="bool类型"></a>bool类型</h3><p>bool类型有两种true和false，在java中布尔类型不是数字类型，和整数0和1没有关系</p>
 <h3 id="算术操作符"><a href="#算术操作符" class="headerlink" title="算术操作符"></a>算术操作符</h3><p><img src="../../../../css/images/javaoperator.jpg" alt="Alt text"></p>
+<p>##整型<br>1.Integer和int区别<br>int初始值为0，Integer初始值为null<br><em>int和Integer相比都为true，因为Integer自动拆箱为int再比较。
+</em>java在编译Integer i2 = 128的时候,被翻译成-&gt; Integer i2 = Integer.valueOf(128);而valueOf()函数会对-128到127之间的数进行缓存<br>所以i4和i5指向同一对象。两个都是非new出来的Integer，如果数在-128到127之间，则是true,否则为false。<br><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">TestInteger</span> </span>&#123;</div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</div><div class="line">        <span class="keyword">int</span> i = <span class="number">128</span>;</div><div class="line">        Integer i2 = <span class="number">128</span>;</div><div class="line">        Integer i3 = <span class="keyword">new</span> Integer(<span class="number">128</span>);</div><div class="line">        <span class="comment">//Integer会自动拆箱为int，所以为true</span></div><div class="line">        System.out.println(i == i2);<span class="comment">//true</span></div><div class="line">        System.out.println(i == i3);<span class="comment">//true</span></div><div class="line">        System.out.println(<span class="string">"**************"</span>);</div><div class="line">        <span class="comment">//java在编译的时候,被翻译成-&gt; Integer i4 = Integer.valueOf(127);</span></div><div class="line">        Integer i4 = <span class="number">127</span>;</div><div class="line">        Integer i5 = <span class="number">127</span>;</div><div class="line">        Integer i6 = <span class="number">128</span>;</div><div class="line">        Integer i7 = <span class="number">128</span>;</div><div class="line">        System.out.println(i4 == i5);<span class="comment">//true</span></div><div class="line">        System.out.println(i6 == i7);<span class="comment">//false</span></div><div class="line">        </div><div class="line">        Integer ii5 = <span class="keyword">new</span> Integer(<span class="number">127</span>);</div><div class="line">        System.out.println(i5 == ii5); <span class="comment">//false</span></div><div class="line">        </div><div class="line">        Integer i8 = <span class="keyword">new</span> Integer(<span class="number">128</span>);</div><div class="line">        Integer i9 = <span class="keyword">new</span> Integer(<span class="number">123</span>);</div><div class="line">        System.out.println(i8== i9);  <span class="comment">//false</span></div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://blog.zhengwl.com/2017/11/12/java-variable/" data-id="cj9wuoj6y0001xctpmleu9cuq" class="article-share-link">Share</a>
+      <a data-url="http://blog.zhengwl.com/2017/11/12/java-variable/" data-id="cjecjk8pi0004gctpg6ja6kuw" class="article-share-link">Share</a>
       
       
     </footer>
@@ -154,10 +156,19 @@
     
 <nav id="article-nav">
   
+    <a href="/2017/11/12/java-reflect/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          java 基础系列之反射
+        
+      </div>
+    </a>
   
-    <a href="/2017/11/12/java-reflect/" id="article-nav-older" class="article-nav-link-wrap">
+  
+    <a href="/2017/09/24/hello-world/" id="article-nav-older" class="article-nav-link-wrap">
       <strong class="article-nav-caption">Older</strong>
-      <div class="article-nav-title">java 基础系列之反射</div>
+      <div class="article-nav-title">hexo基础命令</div>
     </a>
   
 </nav>
@@ -202,7 +213,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">归档</h3>
     <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/11/">十一月 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/09/">九月 2017</a></li></ul>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/03/">三月 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/11/">十一月 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/09/">九月 2017</a></li></ul>
     </div>
   </div>
 
@@ -215,11 +226,19 @@
       <ul>
         
           <li>
-            <a href="/2017/11/12/java-variable/">java 基础系列之基本类型</a>
+            <a href="/2018/03/04/spring-action/">spring-action</a>
+          </li>
+        
+          <li>
+            <a href="/2018/03/04/java-collection/">java-collection</a>
           </li>
         
           <li>
             <a href="/2017/11/12/java-reflect/">java 基础系列之反射</a>
+          </li>
+        
+          <li>
+            <a href="/2017/11/12/java-variable/">java 基础系列之基本类型</a>
           </li>
         
           <li>
@@ -238,7 +257,7 @@
   
   <div class="outer">
     <div id="footer-info" class="inner">
-      &copy; 2017 zhengwl<br>
+      &copy; 2018 zhengwl<br>
       Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
     </div>
   </div>
