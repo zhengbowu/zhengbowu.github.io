@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html>
+<head><meta name="generator" content="Hexo 3.9.0">
+  <meta charset="utf-8">
+  
+  <title>guava | 武林的博客</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="基本介绍Guava,中文是石榴的意思 ，一个基于JDK1.6类库集合的扩展项目">
+<meta name="keywords" content="java">
+<meta property="og:type" content="article">
+<meta property="og:title" content="guava">
+<meta property="og:url" content="http://blog.zhengwl.com/2018/02/04/guava/index.html">
+<meta property="og:site_name" content="武林的博客">
+<meta property="og:description" content="基本介绍Guava,中文是石榴的意思 ，一个基于JDK1.6类库集合的扩展项目">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2020-07-12T16:06:45.330Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="guava">
+<meta name="twitter:description" content="基本介绍Guava,中文是石榴的意思 ，一个基于JDK1.6类库集合的扩展项目">
+  
+    <link rel="alternate" href="/atom.xml" title="武林的博客" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+  
+
+</head>
+</html>
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">武林的博客</a>
+      </h1>
+      
+        <h2 id="subtitle-wrap">
+          <a href="/" id="subtitle">记录学到的知识和总结</a>
+        </h2>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="搜索"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://blog.zhengwl.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-guava" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2018/02/04/guava/" class="article-date">
+  <time datetime="2018-02-04T09:48:14.000Z" itemprop="datePublished">2018-02-04</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/java/">java</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      guava
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="基本介绍"><a href="#基本介绍" class="headerlink" title="基本介绍"></a>基本介绍</h2><p>Guava,中文是石榴的意思 ，一个基于JDK1.6类库集合的扩展项目<br><a id="more"></a><br>com.google.common.annotations：普通注解类型。<br>　com.google.common.base：基本工具类库和接口。<br>　com.google.common.cache：缓存工具包，非常简单易用且功能强大的JVM内缓存。<br>　com.google.common.collect：带泛型的集合接口扩展和实现，以及工具类，这里你会发现很多好玩的集合。<br>  com.google.common.eventbus：发布订阅风格的事件总线。<br>　com.google.common.hash： 哈希工具包。<br>  com.google.common.io：I/O工具包。<br>　com.google.common.math：原始算术类型和超大数的运算工具包。<br>　com.google.common.net：网络工具包。<br>　com.google.common.primitives：八种原始类型和无符号类型的静态工具包。<br>　com.google.common.reflect：反射工具包。<br>　com.google.common.util.concurrent：多线程工具包。<br>  com.google.common.xml xml操作包<br>  18.0 was released on August 25, 2014<br>maven引入<br><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>com.google.guava<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>guava<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">version</span>&gt;</span>18.0<span class="tag">&lt;/<span class="name">version</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br></pre></td></tr></table></figure></p>
+<h2 id="Strings和StringUtils"><a href="#Strings和StringUtils" class="headerlink" title="Strings和StringUtils"></a>Strings和StringUtils</h2><p>org.apache.commons.lang.StringUtils中方法的操作对象是java.lang.String类型的对象，是JDK提供的String类型操作方法的补充，并且是null安全的(即如果输入参数String为null则不会抛出NullPointerException，而是做了相应处理，例如，如果输入为null则返回也是null等，具体可以查看源代码)。<br>除了构造器，StringUtils中一共有130多个方法，并且都是static的。<br><a href="http://blog.csdn.net/chenleixing/article/details/43068331" target="_blank" rel="noopener">详细参考</a><br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">( String[] args )</span></span></span><br><span class="line"><span class="function">    </span>&#123;</span><br><span class="line">        System.out.println(Strings.isNullOrEmpty(<span class="string">""</span>));<span class="comment">//true</span></span><br><span class="line">        System.out.println(Strings.nullToEmpty(<span class="keyword">null</span>));<span class="comment">//""</span></span><br><span class="line">        System.out.println(Strings.nullToEmpty(<span class="string">"ay"</span>));<span class="comment">//"ay"</span></span><br><span class="line">        System.out.println(Strings.emptyToNull(<span class="string">""</span>));<span class="comment">//null</span></span><br><span class="line">        System.out.println(Strings.emptyToNull(<span class="string">"ay"</span>));<span class="comment">//"ay"</span></span><br><span class="line">        System.out.println(Strings.commonPrefix(<span class="string">"aaay"</span>, <span class="string">"aal"</span>));<span class="comment">//返回"aa"，若无返回""</span></span><br><span class="line">        System.out.println(Strings.commonSuffix(<span class="string">"aaay"</span>, <span class="string">"aal"</span>));<span class="comment">//返回"aac"，若无返回""</span></span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure></p>
+<h2 id="Basic-Utilities"><a href="#Basic-Utilities" class="headerlink" title="Basic Utilities"></a>Basic Utilities</h2><h3 id="Optional"><a href="#Optional" class="headerlink" title="Optional"></a>Optional</h3><p>1.常用静态方法：<br>　　Optional.of(T)：获得一个Optional对象，其内部包含了一个非null的T数据类型实例，若T=null，则立刻报错。<br>　　Optional.absent()：获得一个Optional对象，其内部包含了空值<br>　　Optional.fromNullable(T)：将一个T的实例转换为Optional对象，T的实例可以不为空，也可以为空[Optional.fromNullable(null)，和Optional.absent()等价。<br>2.实例方法：<br>　　1&gt;. boolean isPresent()：如果Optional包含的T实例不为null，则返回true；若T实例为null，返回false<br>　　2&gt;. T get()：返回Optional包含的T实例，该T实例必须不为空；否则，对包含null的Optional实例调用get()会抛出一个IllegalStateException异常<br>　　3&gt;. T or(T)：若Optional实例中包含了传入的T的相同实例，返回Optional包含的该T实例，否则返回输入的T实例作为默认值<br>　　4&gt;. T orNull()：返回Optional实例中包含的非空T实例，如果Optional中包含的是空值，返回null，逆操作是fromNullable()<br>　　5&gt;. Set<t> asSet()：返回一个不可修改的Set，该Set中包含Optional实例中包含的所有非空存在的T实例，且在该Set中，每个T实例都是单态，如果Optional中没有非空存在的T实例，返回的将是一个空的不可修改的Set。</t></p>
+<h3 id="Preconditions"><a href="#Preconditions" class="headerlink" title="Preconditions"></a>Preconditions</h3><p>Guava 提供两个基本 “functional” 接口:<br>Function&lt;A, B&gt;, 声明了单个方法 B apply(A input). Function 通常被期待是引用透明的– 无副作用 – 且 ”equals ”语义 和 equals 一致。 a.equals(b) 等同function.apply(a).equals(function.apply(b)).<br>Predicate<t>, 声明了单个方法 boolean apply(T input).  Predicate 通常也被期待为无副作用函数，并且”equals ”语义与equals一致。<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">Function&lt;String, Integer&gt; lengthFunction = <span class="keyword">new</span> Function&lt;String, Integer&gt;() &#123;</span><br><span class="line">  <span class="function"><span class="keyword">public</span> Integer <span class="title">apply</span><span class="params">(String string)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">return</span> string.length();</span><br><span class="line">  &#125;</span><br><span class="line">&#125;;</span><br><span class="line">Predicate&lt;String&gt; allCaps = <span class="keyword">new</span> Predicate&lt;String&gt;() &#123;</span><br><span class="line">  <span class="function"><span class="keyword">public</span> <span class="keyword">boolean</span> <span class="title">apply</span><span class="params">(String string)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">return</span> CharMatcher.JAVA_UPPER_CASE.matchesAllOf(string);</span><br><span class="line">  &#125;</span><br><span class="line">&#125;;</span><br><span class="line">Multiset&lt;Integer&gt; lengths = HashMultiset.create(</span><br><span class="line">  Iterables.transform(Iterables.filter(strings, allCaps), lengthFunction));</span><br></pre></td></tr></table></figure></t></p>
+<p><a href="http://blog.csdn.net/east196/article/details/31371523" target="_blank" rel="noopener">引用地址</a></p>
+<h3 id="Ordering"><a href="#Ordering" class="headerlink" title="Ordering"></a>Ordering</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">Ordering&lt;String&gt; byLengthOrdering = <span class="keyword">new</span> Ordering&lt;String&gt;() &#123;</span><br><span class="line">  <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">compare</span><span class="params">(String left, String right)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">return</span> Ints.compare(left.length(), right.length());</span><br><span class="line">  &#125;</span><br><span class="line">&#125;;</span><br><span class="line">For example, let<span class="string">'s say you want a comparator for the class...</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">class Foo &#123;</span></span><br><span class="line"><span class="string">  @Nullable String sortedBy;</span></span><br><span class="line"><span class="string">  int notSortedBy;</span></span><br><span class="line"><span class="string">&#125;</span></span><br><span class="line"><span class="string">...that can deal with null values of sortedBy. Here is a solution built atop the chaining methods:</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">Ordering&lt;Foo&gt; ordering = Ordering.natural().nullsFirst().onResultOf(new Function&lt;Foo, String&gt;() &#123;</span></span><br><span class="line"><span class="string">  public String apply(Foo foo) &#123;</span></span><br><span class="line"><span class="string">    return foo.sortedBy;</span></span><br><span class="line"><span class="string">  &#125;</span></span><br><span class="line"><span class="string">&#125;);</span></span><br></pre></td></tr></table></figure>
+<h3 id="Object-methods"><a href="#Object-methods" class="headerlink" title="Object methods"></a>Object methods</h3><p>Object common methods<br>1.equals<br>Objects.equal(“a”, “a”); // returns true<br>Objects.equal(null, “a”); // returns false<br>Objects.equal(“a”, null); // returns false<br>Objects.equal(null, null); // returns true<br>2.hashCode<br>Objects.hashCode(Object…)&amp;Objects.hash(Object…)<br>3.toString<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// Returns "ClassName&#123;x=1&#125;"</span></span><br><span class="line">MoreObjects.toStringHelper(<span class="keyword">this</span>)</span><br><span class="line">    .add(<span class="string">"x"</span>, <span class="number">1</span>)</span><br><span class="line">    .toString();</span><br><span class="line"></span><br><span class="line"><span class="comment">// Returns "MyObject&#123;x=1&#125;"</span></span><br><span class="line">MoreObjects.toStringHelper(<span class="string">"MyObject"</span>)</span><br><span class="line">    .add(<span class="string">"x"</span>, <span class="number">1</span>)</span><br><span class="line">    .toString();</span><br></pre></td></tr></table></figure></p>
+<p>4.compare/compareTo<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Person</span> <span class="keyword">implements</span> <span class="title">Comparable</span>&lt;<span class="title">Person</span>&gt; </span>&#123;</span><br><span class="line">  <span class="keyword">private</span> String lastName;</span><br><span class="line">  <span class="keyword">private</span> String firstName;</span><br><span class="line">  <span class="keyword">private</span> <span class="keyword">int</span> zipCode;</span><br><span class="line"></span><br><span class="line">  <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">compareTo</span><span class="params">(Person other)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">int</span> cmp = lastName.compareTo(other.lastName);</span><br><span class="line">    <span class="keyword">if</span> (cmp != <span class="number">0</span>) &#123;</span><br><span class="line">      <span class="keyword">return</span> cmp;</span><br><span class="line">    &#125;</span><br><span class="line">    cmp = firstName.compareTo(other.firstName);</span><br><span class="line">    <span class="keyword">if</span> (cmp != <span class="number">0</span>) &#123;</span><br><span class="line">      <span class="keyword">return</span> cmp;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> Integer.compare(zipCode, other.zipCode);</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//use guava lazy</span></span><br><span class="line">  <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">compareTo</span><span class="params">(Foo that)</span> </span>&#123;</span><br><span class="line">     <span class="keyword">return</span> ComparisonChain.start()</span><br><span class="line">         .compare(<span class="keyword">this</span>.aString, that.aString)</span><br><span class="line">         .compare(<span class="keyword">this</span>.anInt, that.anInt)</span><br><span class="line">         .compare(<span class="keyword">this</span>.anEnum, that.anEnum, Ordering.natural().nullsLast())</span><br><span class="line">         .result();</span><br><span class="line">   &#125;</span><br></pre></td></tr></table></figure></p>
+<h3 id="Throwables"><a href="#Throwables" class="headerlink" title="Throwables"></a>Throwables</h3><h2 id="Collections"><a href="#Collections" class="headerlink" title="Collections"></a>Collections</h2><h3 id="Immutable-Collections"><a href="#Immutable-Collections" class="headerlink" title="Immutable Collections"></a>Immutable Collections</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">public static final ImmutableSet&lt;String&gt; COLOR_NAMES = ImmutableSet.of(</span><br><span class="line">  &quot;red&quot;,</span><br><span class="line">  &quot;orange&quot;,</span><br><span class="line">  &quot;yellow&quot;,</span><br><span class="line">  &quot;green&quot;,</span><br><span class="line">  &quot;blue&quot;,</span><br><span class="line">  &quot;purple&quot;);</span><br><span class="line"></span><br><span class="line">class Foo &#123;</span><br><span class="line">  final ImmutableSet&lt;Bar&gt; bars;</span><br><span class="line">  Foo(Set&lt;Bar&gt; bars) &#123;</span><br><span class="line">    this.bars = ImmutableSet.copyOf(bars); // defensive copy!</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<table>
+<thead>
+<tr>
+<th>Interface</th>
+<th>JDK or Guava?</th>
+<th>Immutable Version</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Collection</td>
+<td>JDK</td>
+<td>ImmutableCollection</td>
+</tr>
+<tr>
+<td>List</td>
+<td>JDK</td>
+<td>ImmutableList</td>
+</tr>
+<tr>
+<td>Set</td>
+<td>JDK</td>
+<td>ImmutableSet</td>
+</tr>
+<tr>
+<td>SortedSet/NavigableSet</td>
+<td>JDK</td>
+<td>ImmutableSortedSet</td>
+</tr>
+<tr>
+<td>Map</td>
+<td>JDK</td>
+<td>ImmutableMap</td>
+</tr>
+<tr>
+<td>SortedMap</td>
+<td>JDK</td>
+<td>ImmutableSortedMap</td>
+</tr>
+<tr>
+<td>Multiset</td>
+<td>Guava</td>
+<td>ImmutableMultiset</td>
+</tr>
+<tr>
+<td>SortedMultiset</td>
+<td>Guava</td>
+<td>ImmutableSortedMultiset</td>
+</tr>
+<tr>
+<td>Multimap</td>
+<td>Guava</td>
+<td>ImmutableMultimap</td>
+</tr>
+<tr>
+<td>ListMultimap</td>
+<td>Guava</td>
+<td>ImmutableListMultimap</td>
+</tr>
+<tr>
+<td>SetMultimap</td>
+<td>Guava</td>
+<td>ImmutableSetMultimap</td>
+</tr>
+<tr>
+<td>BiMap</td>
+<td>Guava</td>
+<td>ImmutableBiMap</td>
+</tr>
+<tr>
+<td>ClassToInstanceMap</td>
+<td>Guava</td>
+<td>ImmutableClassToInstanceMap</td>
+</tr>
+<tr>
+<td>Table</td>
+<td>Guava</td>
+<td>ImmutableTable</td>
+</tr>
+</tbody>
+</table>
+<h3 id="New-collection-types"><a href="#New-collection-types" class="headerlink" title="New collection types"></a>New collection types</h3><p><strong>Multiset</strong><br><strong>Multimap</strong><br><strong>BiMap</strong><br><strong>Table</strong><br><strong>ClassToInstanceMap</strong><br><strong>RangeSet</strong><br><strong>RangeMap</strong></p>
+<p>###Utility Class<br>Interface    |JDK or Guava?    |Corresponding Guava utility class<br>—-|——|—-<br>Collection|    JDK|    Collections2<br>List|    JDK|    Lists<br>Set|    JDK    |Sets<br>SortedSet|    JDK|    Sets<br>Map|    JDK|    Maps<br>SortedMap|    JDK|    Maps<br>Queue|    JDK    |Queues<br>Multiset|    Guava    |Multisets<br>Multimap|    Guava|    Multimaps<br>BiMap    |Guava|    Maps<br>Table|    Guava|    Tables</p>
+<h4 id="Iterables"><a href="#Iterables" class="headerlink" title="Iterables"></a>Iterables</h4><h4 id="Lists"><a href="#Lists" class="headerlink" title="Lists"></a>Lists</h4><h4 id="Sets"><a href="#Sets" class="headerlink" title="Sets"></a>Sets</h4><h4 id="Maps"><a href="#Maps" class="headerlink" title="Maps"></a>Maps</h4><h4 id="Multisets"><a href="#Multisets" class="headerlink" title="Multisets"></a>Multisets</h4><h4 id="Multimaps"><a href="#Multimaps" class="headerlink" title="Multimaps"></a>Multimaps</h4><h4 id="Tables"><a href="#Tables" class="headerlink" title="Tables"></a>Tables</h4><h3 id="Extension-Utilities"><a href="#Extension-Utilities" class="headerlink" title="Extension Utilities"></a>Extension Utilities</h3><h2 id="Graphs"><a href="#Graphs" class="headerlink" title="Graphs"></a>Graphs</h2><h2 id="Caches"><a href="#Caches" class="headerlink" title="Caches"></a>Caches</h2><h2 id="Functional-Idioms"><a href="#Functional-Idioms" class="headerlink" title="Functional Idioms"></a>Functional Idioms</h2><h2 id="Concurrency"><a href="#Concurrency" class="headerlink" title="Concurrency"></a>Concurrency</h2><h2 id="Strings"><a href="#Strings" class="headerlink" title="Strings"></a>Strings</h2><p>1.Joiner<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Joiner joiner = Joiner.on(<span class="string">"; "</span>).skipNulls();</span><br><span class="line"><span class="keyword">return</span> joiner.join(<span class="string">"Harry"</span>, <span class="keyword">null</span>, <span class="string">"Ron"</span>, <span class="string">"Hermione"</span>);</span><br></pre></td></tr></table></figure></p>
+<p>2.Splitter<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">Splitter.on(<span class="string">','</span>)</span><br><span class="line">    .trimResults()</span><br><span class="line">    .omitEmptyStrings()</span><br><span class="line">    .split(<span class="string">"foo,bar,,   qux"</span>);</span><br></pre></td></tr></table></figure></p>
+<p> 3.CharMatcher</p>
+<h2 id="Networking"><a href="#Networking" class="headerlink" title="Networking"></a>Networking</h2><h2 id="Primitives"><a href="#Primitives" class="headerlink" title="Primitives"></a>Primitives</h2><h2 id="Ranges"><a href="#Ranges" class="headerlink" title="Ranges"></a>Ranges</h2><h2 id="I-O"><a href="#I-O" class="headerlink" title="I/O"></a>I/O</h2><h2 id="Hashing"><a href="#Hashing" class="headerlink" title="Hashing"></a>Hashing</h2><h2 id="EventBus"><a href="#EventBus" class="headerlink" title="EventBus"></a>EventBus</h2><h2 id="Math"><a href="#Math" class="headerlink" title="Math"></a>Math</h2><h2 id="Reflection"><a href="#Reflection" class="headerlink" title="Reflection"></a>Reflection</h2><p>TypeToken<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">TypeToken&lt;String&gt; stringTok = TypeToken.of(String<span class="class">.<span class="keyword">class</span>)</span>;</span><br><span class="line">TypeToken&lt;Integer&gt; intTok = TypeToken.of(Integer<span class="class">.<span class="keyword">class</span>)</span>;</span><br><span class="line">TypeToken&lt;List&lt;String&gt;&gt; stringListTok = <span class="keyword">new</span> TypeToken&lt;List&lt;String&gt;&gt;() &#123;&#125;;</span><br></pre></td></tr></table></figure></p>
+<p><a href="https://github.com/eugenp/tutorials/tree/master/guava" target="_blank" rel="noopener">code</a><br><a href="https://github.com/google/guava/wiki/Release19" target="_blank" rel="noopener">github</a></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://blog.zhengwl.com/2018/02/04/guava/" data-id="ckcitlghs000q3otp7gzv1jr9" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/java/">java</a></li></ul>
+
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2018/03/04/java7/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          java7
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2017/11/12/java-reflect/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">java 基础系列之反射</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">分类</h3>
+    <div class="widget">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/java/">java</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">标签云</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/java/" style="font-size: 20px;">java</a> <a href="/tags/spring/" style="font-size: 10px;">spring</a> <a href="/tags/反射/" style="font-size: 10px;">反射</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">归档</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/07/">七月 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/03/">三月 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/03/">三月 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/02/">二月 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/11/">十一月 2017</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">最新文章</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2020/07/12/hello-world/">hexo基础命令</a>
+          </li>
+        
+          <li>
+            <a href="/2019/03/04/lamada/">Java8 Stream API</a>
+          </li>
+        
+          <li>
+            <a href="/2018/03/04/java-innerclasses/">java内部类</a>
+          </li>
+        
+          <li>
+            <a href="/2018/03/04/spring-action/">Spring 实战</a>
+          </li>
+        
+          <li>
+            <a href="/2018/03/04/java-collection/">java 基础系列之常用集合</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2020 zhengwl<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<!-- <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script> -->
+<script src="//cdn.bootcss.com/jquery/2.2.1/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+<div id="totop" style="position:fixed;bottom:50px;right:30px;cursor: pointer;z-index:9999">
+    <a title="返回顶部"><img src="/css/images/scrollup.png"/></a>
+</div>
+<script src="/js/totop.js"></script>
+
+  </div>
+</body>
+</html>
