@@ -5,7 +5,7 @@ environment:
     secure: lMBSQ1ZH+2RwqD4ycNQNsZ3hdcPzrMNSfLnCYZ2Eeff7KaH22ICQsZLErsx0XiEB
 
 install:
-  - ps: Install-Product node --version 10.16
+  - ps: Install-Product node --version 10.16.3
   - node --version
   - npm --version
   - npm install
