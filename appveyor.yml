@@ -1,4 +1,4 @@
-clone_depth: 5
+clone_depth: 6
 
 environment:
   access_token:
@@ -13,7 +13,7 @@ install:
   # and other package you need
 
 build_script:
-  - hexo generate
+  - hexo generate --debug
 
 artifacts:
   - path: public
@@ -23,7 +23,7 @@ on_success:
   - ps: Add-Content "$env:USERPROFILE\.git-credentials" "https://$($env:access_token):x-oauth-basic@github.com`n"
   - git config --global user.email "%GIT_USER_EMAIL%"
   - git config --global user.name "%GIT_USER_NAME%"
-  - git clone --depth 5 -q --branch=%TARGET_BRANCH% %STATIC_SITE_REPO% %TEMP%\static-site
+  - git clone --depth 6 -q --branch=%TARGET_BRANCH% %STATIC_SITE_REPO% %TEMP%\static-site
   - cd %TEMP%\static-site
   - SETLOCAL EnableDelayedExpansion & robocopy "%APPVEYOR_BUILD_FOLDER%\public" "%TEMP%\static-site" /e & IF !ERRORLEVEL! EQU 1 (exit 0) ELSE (IF !ERRORLEVEL! EQU 3 (exit 0) ELSE (exit 1))
   - git add -A
