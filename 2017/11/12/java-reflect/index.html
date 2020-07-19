@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html>
+<head><meta name="generator" content="Hexo 3.9.0">
+  <meta charset="utf-8">
+  
+  <title>java 基础系列之反射 | 武林的博客</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="在java.lang.reflect包中有3个类 Field类，Method类和Constructor类 Class对象每个类都有一个Class对象1234Object obj=new Person();Class cl=obj.getClass();orClass cl2=Class.forName(className); 对象的构造123456无参构造Class cl3=Class.forNa">
+<meta name="keywords" content="java,反射">
+<meta property="og:type" content="article">
+<meta property="og:title" content="java 基础系列之反射">
+<meta property="og:url" content="http://blog.zhengwl.com/2017/11/12/java-reflect/index.html">
+<meta property="og:site_name" content="武林的博客">
+<meta property="og:description" content="在java.lang.reflect包中有3个类 Field类，Method类和Constructor类 Class对象每个类都有一个Class对象1234Object obj=new Person();Class cl=obj.getClass();orClass cl2=Class.forName(className); 对象的构造123456无参构造Class cl3=Class.forNa">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2020-07-19T07:06:20.938Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="java 基础系列之反射">
+<meta name="twitter:description" content="在java.lang.reflect包中有3个类 Field类，Method类和Constructor类 Class对象每个类都有一个Class对象1234Object obj=new Person();Class cl=obj.getClass();orClass cl2=Class.forName(className); 对象的构造123456无参构造Class cl3=Class.forNa">
+  
+    <link rel="alternate" href="/atom.xml" title="武林的博客" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+  
+
+</head>
+</html>
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">武林的博客</a>
+      </h1>
+      
+        <h2 id="subtitle-wrap">
+          <a href="/" id="subtitle">记录学到的知识和总结</a>
+        </h2>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="搜索"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://blog.zhengwl.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-java-reflect" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2017/11/12/java-reflect/" class="article-date">
+  <time datetime="2017-11-12T13:34:42.000Z" itemprop="datePublished">2017-11-12</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/java/">java</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      java 基础系列之反射
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>在java.lang.reflect包中有3个类 Field类，Method类和Constructor类</p>
+<h2 id="Class对象"><a href="#Class对象" class="headerlink" title="Class对象"></a>Class对象</h2><p>每个类都有一个Class对象<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">Object obj=new Person();</span><br><span class="line">Class cl=obj.getClass();</span><br><span class="line">or</span><br><span class="line">Class cl2=Class.forName(className);</span><br></pre></td></tr></table></figure></p>
+<h3 id="对象的构造"><a href="#对象的构造" class="headerlink" title="对象的构造"></a>对象的构造</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">无参构造</span><br><span class="line">Class cl3=Class.forName(<span class="string">"Person"</span>);</span><br><span class="line">Object obj=cl3.newInstance();</span><br><span class="line">/*已知构造函数参数情况下*/</span><br><span class="line">Constructor constr=cl3.getConstructor(int.Class);</span><br><span class="line">Object obj=constr.newInstance(33);</span><br></pre></td></tr></table></figure>
+<h3 id="变量的获取和设置"><a href="#变量的获取和设置" class="headerlink" title="变量的获取和设置"></a>变量的获取和设置</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">Object obj=new Person();</span><br><span class="line"><span class="keyword">for</span>(Field f:obj.getClass().getDeclaredFields())&#123;</span><br><span class="line">	f.setAccessible(<span class="literal">true</span>)//在使用私有的Field和Method对象之前，使用setAccessible方法解锁</span><br><span class="line">	Object val=f.get(obj);</span><br><span class="line">	System.out.println(f.getName()+<span class="string">":"</span>+val);</span><br><span class="line"></span><br><span class="line">	f.set(obj,val+<span class="string">"new"</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="方法调用"><a href="#方法调用" class="headerlink" title="方法调用"></a>方法调用</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">Class cl4=Class.forName(<span class="string">"Person"</span>);</span><br><span class="line">Method m=cl4.getDeclareMethod(<span class="string">"getName"</span>);</span><br><span class="line">Object rel=m.invoke(obj,arg1,arg2,...)</span><br></pre></td></tr></table></figure>
+<h3 id="获取JavaBean属性"><a href="#获取JavaBean属性" class="headerlink" title="获取JavaBean属性"></a>获取JavaBean属性</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">Class cl5=...;</span><br><span class="line">BeanInfo info=Introspector.getBeanInfo(cl5);</span><br><span class="line">PropertyDescriptor[] props=info.getPropertyDescriptors();</span><br></pre></td></tr></table></figure>
+<p>对给定的PropertyDescriptor，通过调用getName()和getPropertyType()方法可以获取属性的名称和类型。</p>
+<p>More info: <a href="https://docs.oracle.com/javase/7/docs/api/java/lang/Class.html" target="_blank" rel="noopener">Class</a></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://blog.zhengwl.com/2017/11/12/java-reflect/" data-id="ckcsqltuy00076oxhqnubhvu6" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/java/">java</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/反射/">反射</a></li></ul>
+
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2018/02/04/guava/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          guava
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2017/11/12/java-variable/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">java 基础系列之基本类型</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">分类</h3>
+    <div class="widget">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/java/">java</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">标签云</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/java/" style="font-size: 20px;">java</a> <a href="/tags/spring/" style="font-size: 10px;">spring</a> <a href="/tags/反射/" style="font-size: 10px;">反射</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">归档</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/03/">三月 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/03/">三月 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/02/">二月 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/11/">十一月 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/09/">九月 2017</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">最新文章</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2019/03/04/lamada/">Java8 Stream API</a>
+          </li>
+        
+          <li>
+            <a href="/2018/03/04/java-innerclasses/">java内部类</a>
+          </li>
+        
+          <li>
+            <a href="/2018/03/04/spring-action/">Spring 实战</a>
+          </li>
+        
+          <li>
+            <a href="/2018/03/04/java-collection/">java 基础系列之常用集合</a>
+          </li>
+        
+          <li>
+            <a href="/2018/03/04/java7/">java7</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2020 zhengwl<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<!-- <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script> -->
+<script src="//cdn.bootcss.com/jquery/2.2.1/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+<div id="totop" style="position:fixed;bottom:50px;right:30px;cursor: pointer;z-index:9999">
+    <a title="返回顶部"><img src="/css/images/scrollup.png"/></a>
+</div>
+<script src="/js/totop.js"></script>
+
+  </div>
+</body>
+</html>
