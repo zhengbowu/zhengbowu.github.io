@@ -7,4 +7,4 @@ tags: ["java"]
 
 ## Java8 Stream API
 ## 委托函数
-函数式编程
+1. 函数式编程
