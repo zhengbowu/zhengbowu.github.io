@@ -5,6 +5,7 @@ environment:
     secure: lMBSQ1ZH+2RwqD4ycNQNsZ3hdcPzrMNSfLnCYZ2Eeff7KaH22ICQsZLErsx0XiEB
 
 install:
+  - ps: Install-Product node 'LTS'
   - node --version
   - npm --version
   - npm install
@@ -26,4 +27,4 @@ on_success:
   - cd %TEMP%\static-site
   - SETLOCAL EnableDelayedExpansion & robocopy "%APPVEYOR_BUILD_FOLDER%\public" "%TEMP%\static-site" /e & IF !ERRORLEVEL! EQU 1 (exit 0) ELSE (IF !ERRORLEVEL! EQU 3 (exit 0) ELSE (exit 1))
   - git add -A
-  - git commit -m "Update Static Site" && git push origin %TARGET_BRANCH% && appveyor AddMessage "Static Site Updated"
+  - if "%TARGET_BRANCH%"=="master" if not defined APPVEYOR_PULL_REQUEST_NUMBER (git diff --quiet --exit-code --cached || git commit -m "Update Static Site" && git push origin %TARGET_BRANCH% && appveyor AddMessage "Static Site Updated")
