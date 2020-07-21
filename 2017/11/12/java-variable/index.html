@@ -12,12 +12,12 @@
 <meta property="og:site_name" content="武林的博客">
 <meta property="og:description" content="java有8个基础数据类型 4个整型，2个浮点型，1个布尔型和1个字符型 基本类型取值范围">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:image" content="http://blog.zhengwl.com/css/images/javaoperator.jpg">
-<meta property="og:updated_time" content="2020-07-19T07:12:58.867Z">
+<meta property="og:image" content="http://blog.zhengwl.com/.com//javaoperator.jpg">
+<meta property="og:updated_time" content="2020-07-21T15:55:08.693Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="java 基础系列之基本类型">
 <meta name="twitter:description" content="java有8个基础数据类型 4个整型，2个浮点型，1个布尔型和1个字符型 基本类型取值范围">
-<meta name="twitter:image" content="http://blog.zhengwl.com/css/images/javaoperator.jpg">
+<meta name="twitter:image" content="http://blog.zhengwl.com/.com//javaoperator.jpg">
   
     <link rel="alternate" href="/atom.xml" title="武林的博客" type="application/atom+xml">
   
@@ -141,14 +141,19 @@
 </table>
 <h3 id="char类型"><a href="#char类型" class="headerlink" title="char类型"></a>char类型</h3><p>char类型使用UTF-16字符编码</p>
 <h3 id="bool类型"><a href="#bool类型" class="headerlink" title="bool类型"></a>bool类型</h3><p>bool类型有两种true和false，在java中布尔类型不是数字类型，和整数0和1没有关系</p>
-<h3 id="算术操作符"><a href="#算术操作符" class="headerlink" title="算术操作符"></a>算术操作符</h3><p><img src="../../../../css/images/javaoperator.jpg" alt="Alt text"></p>
-<h2 id="整型"><a href="#整型" class="headerlink" title="整型"></a>整型</h2><p>1.Integer和int区别<br>int初始值为0，Integer初始值为null<br><em>int和Integer相比都为true，因为Integer自动拆箱为int再比较。
-</em>java在编译Integer i2 = 128的时候,被翻译成-&gt; Integer i2 = Integer.valueOf(128);而valueOf()函数会对-128到127之间的数进行缓存<br>所以i4和i5指向同一对象。两个都是非new出来的Integer，如果数在-128到127之间，则是true,否则为false。<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">TestInteger</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">int</span> i = <span class="number">128</span>;</span><br><span class="line">        Integer i2 = <span class="number">128</span>;</span><br><span class="line">        Integer i3 = <span class="keyword">new</span> Integer(<span class="number">128</span>);</span><br><span class="line">        <span class="comment">//Integer会自动拆箱为int，所以为true</span></span><br><span class="line">        System.out.println(i == i2);<span class="comment">//true</span></span><br><span class="line">        System.out.println(i == i3);<span class="comment">//true</span></span><br><span class="line">        System.out.println(<span class="string">"**************"</span>);</span><br><span class="line">        <span class="comment">//java在编译的时候,被翻译成-&gt; Integer i4 = Integer.valueOf(127);</span></span><br><span class="line">        Integer i4 = <span class="number">127</span>;</span><br><span class="line">        Integer i5 = <span class="number">127</span>;</span><br><span class="line">        Integer i6 = <span class="number">128</span>;</span><br><span class="line">        Integer i7 = <span class="number">128</span>;</span><br><span class="line">        System.out.println(i4 == i5);<span class="comment">//true</span></span><br><span class="line">        System.out.println(i6 == i7);<span class="comment">//false</span></span><br><span class="line">        </span><br><span class="line">        Integer ii5 = <span class="keyword">new</span> Integer(<span class="number">127</span>);</span><br><span class="line">        System.out.println(i5 == ii5); <span class="comment">//false</span></span><br><span class="line">        </span><br><span class="line">        Integer i8 = <span class="keyword">new</span> Integer(<span class="number">128</span>);</span><br><span class="line">        Integer i9 = <span class="keyword">new</span> Integer(<span class="number">123</span>);</span><br><span class="line">        System.out.println(i8== i9);  <span class="comment">//false</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<h3 id="算术操作符"><a href="#算术操作符" class="headerlink" title="算术操作符"></a>算术操作符</h3><p><img src="/.com//javaoperator.jpg" alt="Alt text"></p>
+<h2 id="整型"><a href="#整型" class="headerlink" title="整型"></a>整型</h2><p>1.Integer和int区别</p>
+<ul>
+<li>int初始值为0，Integer初始值为null</li>
+<li>int和Integer相比都为true，因为Integer自动拆箱为int再比较。</li>
+<li>java在编译Integer i2 = 128的时候,被翻译成-&gt; Integer i2 = Integer.valueOf(128);而valueOf()函数会对-128到127之间的数进行缓存<br>所以i4和i5指向同一对象。两个都是非new出来的Integer，如果数在-128到127之间，则是true,否则为false。<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">TestInteger</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">int</span> i = <span class="number">128</span>;</span><br><span class="line">        Integer i2 = <span class="number">128</span>;</span><br><span class="line">        Integer i3 = <span class="keyword">new</span> Integer(<span class="number">128</span>);</span><br><span class="line">        <span class="comment">//Integer会自动拆箱为int，所以为true</span></span><br><span class="line">        System.out.println(i == i2);<span class="comment">//true</span></span><br><span class="line">        System.out.println(i == i3);<span class="comment">//true</span></span><br><span class="line">        System.out.println(<span class="string">"**************"</span>);</span><br><span class="line">        <span class="comment">//java在编译的时候,被翻译成-&gt; Integer i4 = Integer.valueOf(127);</span></span><br><span class="line">        Integer i4 = <span class="number">127</span>;</span><br><span class="line">        Integer i5 = <span class="number">127</span>;</span><br><span class="line">        Integer i6 = <span class="number">128</span>;</span><br><span class="line">        Integer i7 = <span class="number">128</span>;</span><br><span class="line">        System.out.println(i4 == i5);<span class="comment">//true</span></span><br><span class="line">        System.out.println(i6 == i7);<span class="comment">//false</span></span><br><span class="line">        </span><br><span class="line">        Integer ii5 = <span class="keyword">new</span> Integer(<span class="number">127</span>);</span><br><span class="line">        System.out.println(i5 == ii5); <span class="comment">//false</span></span><br><span class="line">        </span><br><span class="line">        Integer i8 = <span class="keyword">new</span> Integer(<span class="number">128</span>);</span><br><span class="line">        Integer i9 = <span class="keyword">new</span> Integer(<span class="number">123</span>);</span><br><span class="line">        System.out.println(i8== i9);  <span class="comment">//false</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://blog.zhengwl.com/2017/11/12/java-variable/" data-id="ckcsqud0z00075cxhudeb6joa" class="article-share-link">Share</a>
+      <a data-url="http://blog.zhengwl.com/2017/11/12/java-variable/" data-id="ckcw4djzu000bboxhz4kd3wj3" class="article-share-link">Share</a>
       
       
     </footer>
@@ -157,19 +162,19 @@
     
 <nav id="article-nav">
   
-    <a href="/2018/02/04/guava/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2017/11/12/java-reflect/" id="article-nav-newer" class="article-nav-link-wrap">
       <strong class="article-nav-caption">Newer</strong>
       <div class="article-nav-title">
         
-          guava
+          java 基础系列之反射
         
       </div>
     </a>
   
   
-    <a href="/2017/11/12/java-reflect/" id="article-nav-older" class="article-nav-link-wrap">
+    <a href="/2017/09/23/hello-world/" id="article-nav-older" class="article-nav-link-wrap">
       <strong class="article-nav-caption">Older</strong>
-      <div class="article-nav-title">java 基础系列之反射</div>
+      <div class="article-nav-title">hexo基础命令</div>
     </a>
   
 </nav>

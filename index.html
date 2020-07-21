@@ -92,15 +92,21 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="Java8-Stream-API"><a href="#Java8-Stream-API" class="headerlink" title="Java8 Stream API"></a>Java8 Stream API</h2><h2 id="委托函数"><a href="#委托函数" class="headerlink" title="委托函数"></a>委托函数</h2><ol>
+        <h2 id="Java8-Stream-API"><a href="#Java8-Stream-API" class="headerlink" title="Java8 Stream API"></a>Java8 Stream API</h2><h2 id="委托函数"><a href="#委托函数" class="headerlink" title="委托函数"></a>委托函数</h2><h2 id="Stram生命周期"><a href="#Stram生命周期" class="headerlink" title="Stram生命周期"></a>Stram生命周期</h2><p><img src="/.com//java-streams.png" alt="streams"><br>java.util.stream API</p>
+<ul>
+<li>构建Stream的4种方式</li>
+<li>流的操作类型<br><strong>Intermediate</strong>： 一个流可以后面跟随零个或多个 intermediate 操作。如：map (mapToInt, flatMap 等)、 filter、 distinct、 sorted、 peek、 limit、 skip、 parallel、 sequential、 unordered。<br><strong>Terminal</strong>：一个流只能有一个 terminal 操作，当这个操作执行后，流就被使用“光”了，无法再被操作。所以这必定是流的最后一个操作。如：forEach、 forEachOrdered、 toArray、 reduce、 collect、 min、 max、 count、 anyMatch、 allMatch、 noneMatch、 findFirst、 findAny、 iterator。<br><strong>Short-circuiting</strong>：当操作一个无限大的 Stream，而又希望在有限时间内完成操作，则在管道内拥有一个 short-circuiting 操作是必要非充分条件。如：anyMatch、 allMatch、 noneMatch、 findFirst、 findAny、 limit</li>
+</ul>
+<ol>
 <li>函数式编程</li>
 <li>链式编程</li>
 </ol>
+<p>More info:<br><a href="https://www.logicbig.com/tutorials/core-java-tutorial/java-util-stream/stream-api-intro.html" target="_blank" rel="noopener">stream-api</a><br><a href="https://developer.ibm.com/zh/articles/j-lo-java8streamapi/" target="_blank" rel="noopener">java8streamapi</a></p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://blog.zhengwl.com/2019/03/04/lamada/" data-id="ckcsqud1f000d5cxh3ffdk60p" class="article-share-link">Share</a>
+      <a data-url="http://blog.zhengwl.com/2019/03/04/lamada/" data-id="ckcw4dk0a000gboxh8j7o222v" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/java/">java</a></li></ul>
@@ -143,7 +149,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://blog.zhengwl.com/2018/03/04/java-innerclasses/" data-id="ckcsqud0z00065cxhendnttu0" class="article-share-link">Share</a>
+      <a data-url="http://blog.zhengwl.com/2018/03/04/java-innerclasses/" data-id="ckcw4djze0006boxhr9luqmic" class="article-share-link">Share</a>
       
       
     </footer>
@@ -175,19 +181,76 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="Spring初步"><a href="#Spring初步" class="headerlink" title="Spring初步"></a>Spring初步</h2><p>1.Spring应用上下文<br><em>ClasspathXmlApplicationContext –读取类路径下的XML配置文件
-</em>FileSystemXmlApplicationContext<br><em>XmlWEbApplicationContext –读取Web应用下的xml配置文件<br>2.Spring中Bean的生命周期<br><img src="http://upload-images.jianshu.io/upload_images/44770-f312de031566217d.png" alt="bean生命周期"><br>3.Spring模块<br><img src="https://timgsa.baidu.com/timg?image&amp;quality=80&amp;size=b9999_10000&amp;sec=1514900467446&amp;di=afc23696c3abeea9fe68e10acd291c87&amp;imgtype=0&amp;src=http%3A%2F%2Fwww.yiibai.com%2Fuploads%2Fallimg%2F131213%2F2223014C2-0.png" alt><br>4.Spring 2.5新特性
-</em>完全支持java6和java EE5<br><em>使用@AutoWired实现基于注解驱动的依赖注入和使用@Qualifier实现细粒度的自动装配控制
-</em>支持@Resource自动扫描使用@Component注解所标注的Spring组件<br><em>一个全新的基于注解驱动的Spring MVC编程模型，极大地简化了Spring Web开发
-</em>内嵌支持AspectJ的类加载织入<br>…<br>5.Spring 3.0新特性<br><em>Spring MVC全面支持Rest
-</em>新的表达式语言吧Spring的依赖注入带到了一个新高度<br><em>Spring MVC的新注解 包括@CookieValue和@RequestHeader
-</em>通过注解取得声明异步和调度方法<br>*不再支持Java1.4</p>
-<h2 id="装配Bean"><a href="#装配Bean" class="headerlink" title="装配Bean"></a>装配Bean</h2><p>1.Spring的Bean作用域<br>作用域 | 定义<br>—-|—-<br>singletion | 每一个Spring容器中，一个Bean定义只有一个对象实例<br>prototype | 允许Bean的定义可以被实例化任意次（每次调用都创建一个实例）<br>request | 在一次Http请求中，每个Bean定义对应一个实例，该作用域仅限Web的Spring上下文中（Spring MVC）<br>session|在一次Http Session中，每个Bean定义对应一个实例，该作用域仅限Web的Spring上下文中（Spring MVC）<br>global-session|在一个全局Http Session中，每个Bean定义对应一个实例，该作用域仅限Portlet上下文中才有效</p>
+        <h2 id="Spring初步"><a href="#Spring初步" class="headerlink" title="Spring初步"></a>Spring初步</h2><ol>
+<li>Spring应用上下文</li>
+</ol>
+<ul>
+<li>ClasspathXmlApplicationContext –读取类路径下的XML配置文件</li>
+<li>FileSystemXmlApplicationContext</li>
+<li>XmlWEbApplicationContext –读取Web应用下的xml配置文件</li>
+</ul>
+<ol start="2">
+<li>Spring中Bean的生命周期<br><img src="http://upload-images.jianshu.io/upload_images/44770-f312de031566217d.png" alt="bean生命周期"></li>
+<li><p>Spring模块<br><img src="/.com//assets/2223014C2-0.png" alt></p>
+</li>
+<li><p>Spring 2.5新特性</p>
+</li>
+</ol>
+<ul>
+<li>完全支持java6和java EE5</li>
+<li>使用@AutoWired实现基于注解驱动的依赖注入和使用@Qualifier实现细粒度的自动装配控制</li>
+<li>支持@Resource自动扫描使用@Component注解所标注的Spring组件</li>
+<li>一个全新的基于注解驱动的Spring MVC编程模型，极大地简化了Spring Web开发</li>
+<li>内嵌支持AspectJ的类加载织入</li>
+</ul>
+<ol start="5">
+<li>Spring 3.0新特性</li>
+</ol>
+<ul>
+<li>Spring MVC全面支持Rest</li>
+<li>新的表达式语言吧Spring的依赖注入带到了一个新高度</li>
+<li>Spring MVC的新注解 包括@CookieValue和@RequestHeader</li>
+<li>通过注解取得声明异步和调度方法</li>
+<li>不再支持Java1.4</li>
+</ul>
+<h2 id="装配Bean"><a href="#装配Bean" class="headerlink" title="装配Bean"></a>装配Bean</h2><ol>
+<li>Spring的Bean作用域</li>
+</ol>
+<table>
+<thead>
+<tr>
+<th>作用域</th>
+<th>定义</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>singletion</td>
+<td>每一个Spring容器中，一个Bean定义只有一个对象实例</td>
+</tr>
+<tr>
+<td>prototype</td>
+<td>允许Bean的定义可以被实例化任意次（每次调用都创建一个实例）</td>
+</tr>
+<tr>
+<td>request</td>
+<td>在一次Http请求中，每个Bean定义对应一个实例，该作用域仅限Web的Spring上下文中（Spring MVC）</td>
+</tr>
+<tr>
+<td>session</td>
+<td>在一次Http Session中，每个Bean定义对应一个实例，该作用域仅限Web的Spring上下文中（Spring MVC）</td>
+</tr>
+<tr>
+<td>global-session</td>
+<td>在一个全局Http Session中，每个Bean定义对应一个实例，该作用域仅限Portlet上下文中才有效</td>
+</tr>
+</tbody>
+</table>
 <h2 id="Spring-XML配置"><a href="#Spring-XML配置" class="headerlink" title="Spring XML配置"></a>Spring XML配置</h2><h2 id="Spring-AOP"><a href="#Spring-AOP" class="headerlink" title="Spring AOP"></a>Spring AOP</h2><h2 id="Spring-数据库"><a href="#Spring-数据库" class="headerlink" title="Spring 数据库"></a>Spring 数据库</h2><h2 id="Spring-事务"><a href="#Spring-事务" class="headerlink" title="Spring 事务"></a>Spring 事务</h2><h2 id="Spring-MVC"><a href="#Spring-MVC" class="headerlink" title="Spring MVC"></a>Spring MVC</h2><h2 id="Spring-WebFlow"><a href="#Spring-WebFlow" class="headerlink" title="Spring WebFlow"></a>Spring WebFlow</h2>
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://blog.zhengwl.com/2018/03/04/spring-action/" data-id="ckcsqud1f000i5cxhs2jopuzv" class="article-share-link">Share</a>
+      <a data-url="http://blog.zhengwl.com/2018/03/04/spring-action/" data-id="ckcw4dk0a000jboxhee6ncfjg" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/java/">java</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/spring/">spring</a></li></ul>
@@ -225,13 +288,13 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="Java中set-map-list区别"><a href="#Java中set-map-list区别" class="headerlink" title="Java中set map list区别"></a>Java中set map list区别</h2><p><a href="#test">test</a>s<br><a href="http://images2015.cnblogs.com/blog/820406/201605/820406-20160529134155569-877986274.png" target="_blank" rel="noopener">集合结构</a><br><img src="http://img.blog.csdn.net/20140628144205625" alt="Java集合类的整体框架"><br><strong>list 元素允许重复，元素有顺序。查找效率高，增删效率低（增删会引起其他元素位置改变）</strong><br>1.ArrayList : 由数组实现的List。允许对元素进行快速随机访问，但是向List中间插入与移除元素的速度很慢。ListIterator只应该用来由后向前遍历ArrayList,而不是用来插入和移除元素。因为那比LinkedList开销要大很多。<br>2.LinkedList : 对顺序访问进行了优化，向List中间插入与删除的开销并不大。随机访问则相对较慢。（使用ArrayList代替。）还具有下列方法：addFirst(), addLast(), getFirst(), getLast(), removeFirst() 和removeLast(), 这些方法 （没有在任何接口或基类中定义过）使得LinkedList可以当作堆栈、队列和双向队列使用。<br><strong>set  元素不能重复，重复元素会被覆盖，元素无顺序。（set中元素位置由该元素的hashCode决定的，其位置是固定的）检索效率低，增删效率高</strong><br>1.HashSet : 为快速查找设计的Set。存入HashSet的对象必须定义hashCode()。<br>2.TreeSet : 保存次序的Set, 底层为树结构。使用它可以从Set中提取有序的序列。<br>3.LinkedHashSet : 具有HashSet的查询速度，且内部使用链表维护元素的顺序（插入的次序）。于是在使用迭代器遍历Set时，结果会按元素插入的次序显示。<br><strong>map  键值对数据结构，键值唯一</strong><br>1.HashMap : Map基于散列表的实现。插入和查询“键值对”的开销是固定的。可以通过构造器设置容量capacity和负载因子load factor，以调整容器的性能。<br>2.LinkedHashMap : 类似于HashMap，但是迭代遍历它时，取得“键值对”的顺序是其插入次序，或者是最近最少使用(LRU)的次序。只比HashMap慢一点。而在迭代访问时发而更快，因为它使用链表维护内部次序。<br>3.TreeMap : 基于红黑树数据结构的实现。查看“键”或“键值对”时，它们会被排序（次序由Comparabel或Comparator决定）。TreeMap的特点在于，你得到的结果是经过排序的。TreeMap是唯一的带有    subMap()方法的Map，它可以返回一个子树。<br>4.WeakHashMao : 弱键(weak key)Map，Map中使用的对象也被允许释放: 这是为解决特殊问题设计的。如果没有map之外的引用指向某个“键”，则此“键”可以被垃圾收集器回收。<br>5.IdentifyHashMap : 使用==代替equals()对“键”作比较的hash map。专为解决特殊问题而设计。<br><strong>线程安全的集合类型</strong><br>Vector,HashTable</p>
-<h3 id="test"><a href="#test" class="headerlink" title="test"></a>test</h3><p>[<a href="https://www.cnblogs.com/paddix/p/5539326.html]" target="_blank" rel="noopener">https://www.cnblogs.com/paddix/p/5539326.html]</a><br>[<a href="http://blog.csdn.net/ns_code/article/details/35564663]" target="_blank" rel="noopener">http://blog.csdn.net/ns_code/article/details/35564663]</a></p>
+        <h2 id="Java中set-map-list区别"><a href="#Java中set-map-list区别" class="headerlink" title="Java中set map list区别"></a>Java中set map list区别</h2><p><a href="#参考资料">引用资料</a><br><a href="http://images2015.cnblogs.com/blog/820406/201605/820406-20160529134155569-877986274.png" target="_blank" rel="noopener">集合结构</a><br><img src="http://img.blog.csdn.net/20140628144205625" alt="Java集合类的整体框架"><br><strong>list 元素允许重复，元素有顺序。查找效率高，增删效率低（增删会引起其他元素位置改变）</strong><br>1.ArrayList : 由数组实现的List。允许对元素进行快速随机访问，但是向List中间插入与移除元素的速度很慢。ListIterator只应该用来由后向前遍历ArrayList,而不是用来插入和移除元素。因为那比LinkedList开销要大很多。<br>2.LinkedList : 对顺序访问进行了优化，向List中间插入与删除的开销并不大。随机访问则相对较慢。（使用ArrayList代替。）还具有下列方法：addFirst(), addLast(), getFirst(), getLast(), removeFirst() 和removeLast(), 这些方法 （没有在任何接口或基类中定义过）使得LinkedList可以当作堆栈、队列和双向队列使用。<br><strong>set  元素不能重复，重复元素会被覆盖，元素无顺序。（set中元素位置由该元素的hashCode决定的，其位置是固定的）检索效率低，增删效率高</strong><br>1.HashSet : 为快速查找设计的Set。存入HashSet的对象必须定义hashCode()。<br>2.TreeSet : 保存次序的Set, 底层为树结构。使用它可以从Set中提取有序的序列。<br>3.LinkedHashSet : 具有HashSet的查询速度，且内部使用链表维护元素的顺序（插入的次序）。于是在使用迭代器遍历Set时，结果会按元素插入的次序显示。<br><strong>map  键值对数据结构，键值唯一</strong><br>1.HashMap : Map基于散列表的实现。插入和查询“键值对”的开销是固定的。可以通过构造器设置容量capacity和负载因子load factor，以调整容器的性能。<br>2.LinkedHashMap : 类似于HashMap，但是迭代遍历它时，取得“键值对”的顺序是其插入次序，或者是最近最少使用(LRU)的次序。只比HashMap慢一点。而在迭代访问时发而更快，因为它使用链表维护内部次序。<br>3.TreeMap : 基于红黑树数据结构的实现。查看“键”或“键值对”时，它们会被排序（次序由Comparabel或Comparator决定）。TreeMap的特点在于，你得到的结果是经过排序的。TreeMap是唯一的带有    subMap()方法的Map，它可以返回一个子树。<br>4.WeakHashMao : 弱键(weak key)Map，Map中使用的对象也被允许释放: 这是为解决特殊问题设计的。如果没有map之外的引用指向某个“键”，则此“键”可以被垃圾收集器回收。<br>5.IdentifyHashMap : 使用==代替equals()对“键”作比较的hash map。专为解决特殊问题而设计。<br><strong>线程安全的集合类型</strong><br>Vector,HashTable</p>
+<h3 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h3><p>[<a href="https://www.cnblogs.com/paddix/p/5539326.html]" target="_blank" rel="noopener">https://www.cnblogs.com/paddix/p/5539326.html]</a><br>[<a href="http://blog.csdn.net/ns_code/article/details/35564663]" target="_blank" rel="noopener">http://blog.csdn.net/ns_code/article/details/35564663]</a></p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://blog.zhengwl.com/2018/03/04/java-collection/" data-id="ckcsqud0k00035cxhtlpann3p" class="article-share-link">Share</a>
+      <a data-url="http://blog.zhengwl.com/2018/03/04/java-collection/" data-id="ckcw4djze0005boxhgpeqsh2z" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/java/">java</a></li></ul>
@@ -282,7 +345,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://blog.zhengwl.com/2018/03/04/java7/" data-id="ckcsqud1f000c5cxhx9p5jbok" class="article-share-link">Share</a>
+      <a data-url="http://blog.zhengwl.com/2018/03/04/java7/" data-id="ckcw4djzu000cboxh0ssailsv" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/java/">java</a></li></ul>
@@ -320,7 +383,7 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="基本介绍"><a href="#基本介绍" class="headerlink" title="基本介绍"></a>基本介绍</h2><p>Guava,中文是石榴的意思 ，一个基于JDK1.6类库集合的扩展项目<br>
+        <h2 id="基本介绍"><a href="#基本介绍" class="headerlink" title="基本介绍"></a>基本介绍</h2><p>Guava,中文是石榴的意思 ，一个基于JDK1.6类库集合的扩展项目<br></p>
         
           <p class="article-more-link">
             <a href="/2018/02/04/guava/#more">Read More</a>
@@ -329,57 +392,11 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://blog.zhengwl.com/2018/02/04/guava/" data-id="ckcsqud0k00025cxh97lo3klk" class="article-share-link">Share</a>
+      <a data-url="http://blog.zhengwl.com/2018/02/04/guava/" data-id="ckcw4djyz0001boxh7kl81ig6" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/java/">java</a></li></ul>
 
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-java-variable" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2017/11/12/java-variable/" class="article-date">
-  <time datetime="2017-11-12T13:34:42.000Z" itemprop="datePublished">2017-11-12</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/java/">java</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/11/12/java-variable/">java 基础系列之基本类型</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>java有8个基础数据类型 4个整型，2个浮点型，1个布尔型和1个字符型</p>
-<h2 id="基本类型取值范围"><a href="#基本类型取值范围" class="headerlink" title="基本类型取值范围"></a>基本类型取值范围</h2>
-        
-          <p class="article-more-link">
-            <a href="/2017/11/12/java-variable/#more">Read More</a>
-          </p>
-        
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://blog.zhengwl.com/2017/11/12/java-variable/" data-id="ckcsqud0z00075cxhudeb6joa" class="article-share-link">Share</a>
-      
-      
     </footer>
   </div>
   
@@ -425,11 +442,57 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://blog.zhengwl.com/2017/11/12/java-reflect/" data-id="ckcsqud0z00085cxh3w18abfs" class="article-share-link">Share</a>
+      <a data-url="http://blog.zhengwl.com/2017/11/12/java-reflect/" data-id="ckcw4djzu0007boxh5l8n6pcx" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/java/">java</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/反射/">反射</a></li></ul>
 
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-java-variable" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2017/11/12/java-variable/" class="article-date">
+  <time datetime="2017-11-12T13:34:42.000Z" itemprop="datePublished">2017-11-12</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/java/">java</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/11/12/java-variable/">java 基础系列之基本类型</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>java有8个基础数据类型 4个整型，2个浮点型，1个布尔型和1个字符型</p>
+<h2 id="基本类型取值范围"><a href="#基本类型取值范围" class="headerlink" title="基本类型取值范围"></a>基本类型取值范围</h2>
+        
+          <p class="article-more-link">
+            <a href="/2017/11/12/java-variable/#more">Read More</a>
+          </p>
+        
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://blog.zhengwl.com/2017/11/12/java-variable/" data-id="ckcw4djzu000bboxhz4kd3wj3" class="article-share-link">Share</a>
+      
+      
     </footer>
   </div>
   
@@ -472,7 +535,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://blog.zhengwl.com/2017/09/23/hello-world/" data-id="ckcsqud0k00015cxhr22otwoo" class="article-share-link">Share</a>
+      <a data-url="http://blog.zhengwl.com/2017/09/23/hello-world/" data-id="ckcw4djze0002boxh2n0zwk91" class="article-share-link">Share</a>
       
       
     </footer>

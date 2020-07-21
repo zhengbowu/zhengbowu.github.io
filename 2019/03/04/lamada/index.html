@@ -5,18 +5,20 @@
   
   <title>Java8 Stream API | 武林的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="Java8 Stream API委托函数 函数式编程 链式编程">
+  <meta name="description" content="Java8 Stream API委托函数Stram生命周期java.util.stream API  构建Stream的4种方式 流的操作类型Intermediate： 一个流可以后面跟随零个或多个 intermediate 操作。如：map (mapToInt, flatMap 等)、 filter、 distinct、 sorted、 peek、 limit、 skip、 parallel、">
 <meta name="keywords" content="java">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Java8 Stream API">
 <meta property="og:url" content="http://blog.zhengwl.com/2019/03/04/lamada/index.html">
 <meta property="og:site_name" content="武林的博客">
-<meta property="og:description" content="Java8 Stream API委托函数 函数式编程 链式编程">
+<meta property="og:description" content="Java8 Stream API委托函数Stram生命周期java.util.stream API  构建Stream的4种方式 流的操作类型Intermediate： 一个流可以后面跟随零个或多个 intermediate 操作。如：map (mapToInt, flatMap 等)、 filter、 distinct、 sorted、 peek、 limit、 skip、 parallel、">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2020-07-19T07:12:58.867Z">
+<meta property="og:image" content="http://blog.zhengwl.com/.com//java-streams.png">
+<meta property="og:updated_time" content="2020-07-21T15:55:08.693Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Java8 Stream API">
-<meta name="twitter:description" content="Java8 Stream API委托函数 函数式编程 链式编程">
+<meta name="twitter:description" content="Java8 Stream API委托函数Stram生命周期java.util.stream API  构建Stream的4种方式 流的操作类型Intermediate： 一个流可以后面跟随零个或多个 intermediate 操作。如：map (mapToInt, flatMap 等)、 filter、 distinct、 sorted、 peek、 limit、 skip、 parallel、">
+<meta name="twitter:image" content="http://blog.zhengwl.com/.com//java-streams.png">
   
     <link rel="alternate" href="/atom.xml" title="武林的博客" type="application/atom+xml">
   
@@ -95,15 +97,21 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="Java8-Stream-API"><a href="#Java8-Stream-API" class="headerlink" title="Java8 Stream API"></a>Java8 Stream API</h2><h2 id="委托函数"><a href="#委托函数" class="headerlink" title="委托函数"></a>委托函数</h2><ol>
+        <h2 id="Java8-Stream-API"><a href="#Java8-Stream-API" class="headerlink" title="Java8 Stream API"></a>Java8 Stream API</h2><h2 id="委托函数"><a href="#委托函数" class="headerlink" title="委托函数"></a>委托函数</h2><h2 id="Stram生命周期"><a href="#Stram生命周期" class="headerlink" title="Stram生命周期"></a>Stram生命周期</h2><p><img src="/.com//java-streams.png" alt="streams"><br>java.util.stream API</p>
+<ul>
+<li>构建Stream的4种方式</li>
+<li>流的操作类型<br><strong>Intermediate</strong>： 一个流可以后面跟随零个或多个 intermediate 操作。如：map (mapToInt, flatMap 等)、 filter、 distinct、 sorted、 peek、 limit、 skip、 parallel、 sequential、 unordered。<br><strong>Terminal</strong>：一个流只能有一个 terminal 操作，当这个操作执行后，流就被使用“光”了，无法再被操作。所以这必定是流的最后一个操作。如：forEach、 forEachOrdered、 toArray、 reduce、 collect、 min、 max、 count、 anyMatch、 allMatch、 noneMatch、 findFirst、 findAny、 iterator。<br><strong>Short-circuiting</strong>：当操作一个无限大的 Stream，而又希望在有限时间内完成操作，则在管道内拥有一个 short-circuiting 操作是必要非充分条件。如：anyMatch、 allMatch、 noneMatch、 findFirst、 findAny、 limit</li>
+</ul>
+<ol>
 <li>函数式编程</li>
 <li>链式编程</li>
 </ol>
+<p>More info:<br><a href="https://www.logicbig.com/tutorials/core-java-tutorial/java-util-stream/stream-api-intro.html" target="_blank" rel="noopener">stream-api</a><br><a href="https://developer.ibm.com/zh/articles/j-lo-java8streamapi/" target="_blank" rel="noopener">java8streamapi</a></p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://blog.zhengwl.com/2019/03/04/lamada/" data-id="ckcsqud1f000d5cxh3ffdk60p" class="article-share-link">Share</a>
+      <a data-url="http://blog.zhengwl.com/2019/03/04/lamada/" data-id="ckcw4dk0a000gboxh8j7o222v" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/java/">java</a></li></ul>
