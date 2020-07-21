@@ -23,13 +23,13 @@ char类型使用UTF-16字符编码
 bool类型有两种true和false，在java中布尔类型不是数字类型，和整数0和1没有关系
 
 ### 算术操作符
-![Alt text](../../../../css/images/javaoperator.jpg)
+![Alt text](javaoperator.jpg)
 
 ## 整型
 1.Integer和int区别
-int初始值为0，Integer初始值为null
-*int和Integer相比都为true，因为Integer自动拆箱为int再比较。
-*java在编译Integer i2 = 128的时候,被翻译成-> Integer i2 = Integer.valueOf(128);而valueOf()函数会对-128到127之间的数进行缓存
+* int初始值为0，Integer初始值为null
+* int和Integer相比都为true，因为Integer自动拆箱为int再比较。
+* java在编译Integer i2 = 128的时候,被翻译成-> Integer i2 = Integer.valueOf(128);而valueOf()函数会对-128到127之间的数进行缓存
 所以i4和i5指向同一对象。两个都是非new出来的Integer，如果数在-128到127之间，则是true,否则为false。
 ``` java
 public class TestInteger {

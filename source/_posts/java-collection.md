@@ -6,7 +6,7 @@ tags: ["java"]
 ---
 
 ## Java中set map list区别
-[test](#test)s
+[引用资料](#参考资料)
 [集合结构](http://images2015.cnblogs.com/blog/820406/201605/820406-20160529134155569-877986274.png)
 ![Java集合类的整体框架](http://img.blog.csdn.net/20140628144205625)
 **list 元素允许重复，元素有顺序。查找效率高，增删效率低（增删会引起其他元素位置改变）**
@@ -24,7 +24,7 @@ tags: ["java"]
 5.IdentifyHashMap : 使用==代替equals()对“键”作比较的hash map。专为解决特殊问题而设计。
 **线程安全的集合类型**
 Vector,HashTable
-### test
 
+### 参考资料
 [https://www.cnblogs.com/paddix/p/5539326.html]
 [http://blog.csdn.net/ns_code/article/details/35564663]
