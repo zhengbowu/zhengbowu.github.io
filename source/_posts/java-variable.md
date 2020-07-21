@@ -23,7 +23,7 @@ char类型使用UTF-16字符编码
 bool类型有两种true和false，在java中布尔类型不是数字类型，和整数0和1没有关系
 
 ### 算术操作符
-![Alt text](javaoperator.jpg)
+![](/images/javaoperator.jpg)
 
 ## 整型
 1.Integer和int区别

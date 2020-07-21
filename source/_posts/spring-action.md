@@ -14,7 +14,7 @@ tags: ["java","spring"]
 2. Spring中Bean的生命周期
 ![bean生命周期](http://upload-images.jianshu.io/upload_images/44770-f312de031566217d.png)
 3. Spring模块
-![](../assets/2223014C2-0.png)
+![](/images/2223014C2-0.png)
 
 4. Spring 2.5新特性
 * 完全支持java6和java EE5

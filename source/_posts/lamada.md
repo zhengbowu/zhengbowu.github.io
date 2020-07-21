@@ -9,7 +9,7 @@ tags: ["java"]
 ## 委托函数
 
 ## Stram生命周期
-![streams](java-streams.png)
+![streams](/images/java-streams.png)
 java.util.stream API
 * 构建Stream的4种方式
 * 流的操作类型
